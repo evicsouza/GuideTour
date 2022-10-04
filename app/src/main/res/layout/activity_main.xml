@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imagemTelaPrincipal"
+            android:layout_width="match_parent"
+            android:layout_height="209dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <LinearLayout
+            android:id="@+id/layoutBotoesTelaPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButtonRotas"
+                android:layout_width="140dp"
+                android:layout_height="105dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/rotasred" />
+
+            <ImageButton
+                android:id="@+id/imageButtonOndeIr"
+                android:layout_width="140dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/comidared" />
+
+            <ImageButton
+                android:id="@+id/imageButtonRestaurantes"
+                android:layout_width="140dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ondeirred" />
+
+            <ImageButton
+                android:id="@+id/imageButtonServicosMedicos"
+                android:layout_width="140dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/servmedicosred" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="302dp"
+                android:layout_height="65dp"
+                android:text="Pesquisar..." />
+
+            <ImageButton
+                android:id="@+id/imageButtonPesquisar"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_search_category_default" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
