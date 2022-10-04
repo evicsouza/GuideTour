@@ -1,9 +1,14 @@
 Trabalhamos utilizando um fluxo de trabalho chamado de git flow, para organizar o nosso versionamento de código.
 
 O Git Flow trabalha com duas branches principais, a Develop e a Master, que duram para sempre; e três branches de suporte, Feature, Release e Hotfix, que são temporários e duram até realizar o merge com as branches principais. 
+
 Então, ao invés de uma única branch Master, esse fluxo de trabalho utiliza duas branches principais para registrar o histórico do projeto. A branch Master armazena o histórico do lançamento oficial, e a branch Develop serve como uma ramificação de integração para recursos.
+
 A branch Master é a principal branch, aqui é onde temos todo o código de produção. Todas as novas funcionalidades que estão sendo desenvolvidas, em algum momento, serão mescladas ou associadas a Master.
+
 Branch Develop é a branch onde fica o código do próximo deploy. Ela serve como uma linha do tempo com os últimos desenvolvimentos, isso significa que ela possui funcionalidades que ainda não foram publicadas e que posteriormente vão ser associadas com a branch Master.
+
+
 
 
 Para contribuir:
@@ -16,7 +21,9 @@ Para contribuir:
 7. Verifique se não há conflitos entre o seu branch local com o branch master upstream (o código original) ($ git fetch upstream e $ git rebase upstream/master)
 8. Verifique se o código está compilando e passando nos testes ($ mvn clean package)
 9. Envie o branch modificado para o seu repositório ($ git push origin ID)
-10. No GitHub, vá ao site do projeto original, e abra um Pull Request (PR). No comentário do PR, faça a referência a issue aberta (Escreva "Conforme a issue #ID" (sem as aspas))
+10. No GitHub, vá ao site do projeto original, e abra um Pull Request (PR). No comentário do PR, faça a referência a issue aberta (Escreva "Conforme a issue #ID" (sem as aspas)).
+
+
 
 
 Para sincronizar as bases, siga os seguintes passos:
