@@ -2,83 +2,124 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutPrincipal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayoutPrincipal"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutImagem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="0dp">
 
-        <ImageView
-            android:id="@+id/imagemTelaPrincipal"
-            android:layout_width="match_parent"
-            android:layout_height="209dp"
-            app:srcCompat="@drawable/ic_launcher_background" />
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/imageFilterView"
+            android:layout_width="419dp"
+            android:layout_height="335dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.291"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-        <LinearLayout
-            android:id="@+id/layoutBotoesTelaPrincipal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBotoes"
+            android:layout_width="379dp"
+            android:layout_height="119dp"
+            android:layout_marginTop="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageFilterView">
 
-            <ImageButton
-                android:id="@+id/imageButtonRotas"
-                android:layout_width="140dp"
-                android:layout_height="105dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/rotasred" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button_restaurantes"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_ondeIr"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ondeir"
+                tools:ignore="MissingConstraints" />
 
-            <ImageButton
-                android:id="@+id/imageButtonOndeIr"
-                android:layout_width="140dp"
-                android:layout_height="105dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/comidared" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button_ondeIr"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_hospedagens"
+                app:layout_constraintHorizontal_bias="0.27"
+                app:layout_constraintStart_toEndOf="@+id/floating_action_button_restaurantes"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ondeir"
+                tools:ignore="MissingConstraints" />
 
-            <ImageButton
-                android:id="@+id/imageButtonRestaurantes"
-                android:layout_width="140dp"
-                android:layout_height="105dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ondeirred" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button_hospedagens"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_sevMedicos"
+                app:layout_constraintStart_toEndOf="@+id/floating_action_button_ondeIr"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ondeir"
+                tools:ignore="MissingConstraints" />
 
-            <ImageButton
-                android:id="@+id/imageButtonServicosMedicos"
-                android:layout_width="140dp"
-                android:layout_height="105dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/servmedicosred" />
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button_sevMedicos"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_rotas"
+                app:layout_constraintStart_toEndOf="@+id/floating_action_button_hospedagens"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ondeir"
+                tools:ignore="MissingConstraints" />
 
-        </LinearLayout>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/floating_action_button_rotas"
+                android:layout_width="47dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="2dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/floating_action_button_sevMedicos"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.48000002"
+                app:srcCompat="@drawable/ondeir"
+                tools:ignore="MissingConstraints" />
 
-        <LinearLayout
-            android:id="@+id/layoutPesquisa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="302dp"
-                android:layout_height="65dp"
-                android:text="Pesquisar..." />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutRodape"
+            android:layout_width="412dp"
+            android:layout_height="59dp"
+            android:backgroundTint="@color/purple_200"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" >
 
-            <ImageButton
-                android:id="@+id/imageButtonPesquisar"
-                android:layout_width="56dp"
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_search_category_default" />
-        </LinearLayout>
+                android:background="@color/teal_700"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
