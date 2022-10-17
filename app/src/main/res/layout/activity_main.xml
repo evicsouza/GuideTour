@@ -11,8 +11,10 @@
         android:id="@+id/constraintLayoutImagem"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="0dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageFilterView"
@@ -33,73 +35,48 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageFilterView">
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_action_button_restaurantes"
-                android:layout_width="47dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="2dp"
-                android:layout_marginEnd="16dp"
+            <ImageView
+                android:id="@+id/imageViewUm"
+                android:layout_width="74dp"
+                android:layout_height="82dp"
+                android:layout_marginStart="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_ondeIr"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ondeir"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintVertical_bias="0.486"
+                app:srcCompat="@drawable/comida" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_action_button_ondeIr"
-                android:layout_width="47dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+            <ImageView
+                android:id="@+id/imageViewDois"
+                android:layout_width="74dp"
+                android:layout_height="82dp"
+                android:layout_marginStart="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_hospedagens"
-                app:layout_constraintHorizontal_bias="0.27"
-                app:layout_constraintStart_toEndOf="@+id/floating_action_button_restaurantes"
+                app:layout_constraintStart_toEndOf="@+id/imageViewUm"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ondeir"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintVertical_bias="0.486"
+                app:srcCompat="@drawable/ondeir" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_action_button_hospedagens"
-                android:layout_width="47dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+            <ImageView
+                android:id="@+id/imageViewTres"
+                android:layout_width="74dp"
+                android:layout_height="82dp"
+                android:layout_marginStart="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_sevMedicos"
-                app:layout_constraintStart_toEndOf="@+id/floating_action_button_ondeIr"
+                app:layout_constraintStart_toEndOf="@+id/imageViewDois"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ondeir"
-                tools:ignore="MissingConstraints" />
+                app:layout_constraintVertical_bias="0.567"
+                app:srcCompat="@drawable/servmedicos" />
 
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_action_button_sevMedicos"
-                android:layout_width="47dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/floating_action_button_rotas"
-                app:layout_constraintStart_toEndOf="@+id/floating_action_button_hospedagens"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ondeir"
-                tools:ignore="MissingConstraints" />
-
-            <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/floating_action_button_rotas"
-                android:layout_width="47dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="2dp"
+            <ImageView
+                android:id="@+id/imageViewQuatro"
+                android:layout_width="74dp"
+                android:layout_height="82dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/floating_action_button_sevMedicos"
+                app:layout_constraintStart_toEndOf="@+id/imageViewTres"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.48000002"
-                app:srcCompat="@drawable/ondeir"
-                tools:ignore="MissingConstraints" />
-
+                app:srcCompat="@drawable/rotas" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,7 +86,7 @@
             android:backgroundTint="@color/purple_200"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" >
+            app:layout_constraintStart_toStartOf="parent">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -117,7 +94,64 @@
                 android:layout_height="wrap_content"
                 android:background="@color/teal_700"
                 android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme" />
+                android:theme="?attr/actionBarTheme"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="72dp"
+                android:layout_height="54dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView6"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/_250665" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="73dp"
+                android:layout_height="59dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/_239343" />
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="67dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="88dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.571"
+                app:srcCompat="@drawable/_51910" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="65dp"
+                android:layout_height="56dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.728"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/_89708" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="60dp"
+                android:layout_height="55dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/_341632" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
