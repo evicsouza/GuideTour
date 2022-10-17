@@ -13,24 +13,44 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageFilterView"
-            android:layout_width="419dp"
-            android:layout_height="335dp"
+            android:layout_width="417dp"
+            android:layout_height="329dp"
+            android:layout_marginStart="4dp"
             app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.291"
+            app:layout_constraintVertical_bias="0.498"
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutPesquisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlinedTextField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/label"
+                tools:ignore="MissingConstraints">
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutBotoes"
             android:layout_width="379dp"
             android:layout_height="119dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="256dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageFilterView">
@@ -92,7 +112,7 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/teal_700"
+                android:background="@color/purple_200"
                 android:minHeight="?attr/actionBarSize"
                 android:theme="?attr/actionBarTheme"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -153,6 +173,29 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/_341632" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditText"
+            android:layout_width="219dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="256dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/elevatedButton"
+            style="@style/Widget.Material3.Button.ElevatedButton"
+            android:layout_width="107dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="244dp"
+            android:shadowColor="@color/black"
+            android:text="Pesquisar"
+            android:textSize="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.894"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
