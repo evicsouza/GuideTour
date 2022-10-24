@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "602739787744",
+    "project_id": "guidetour-45558",
+    "storage_bucket": "guidetour-45558.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:602739787744:android:0bb6c486f0d09f507b0d85",
+        "android_client_info": {
+          "package_name": "com.evavictoria.locus.guidetour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "602739787744-qk3ug4e92r1o28r2p9m45b3b8tbg8ngb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.evavictoria.locus.guidetour",
+            "certificate_hash": "d06403f0e7f53bd651bbbe4b1481b5e2c494a7ac"
+          }
+        },
+        {
+          "client_id": "602739787744-11gu9v2ug3vom0h7iq32oo93apsffgb2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAZ49tc5wcq4t-SWFF5Hsu6g4xFTs9pvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "602739787744-11gu9v2ug3vom0h7iq32oo93apsffgb2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

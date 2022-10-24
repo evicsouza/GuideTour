@@ -31,19 +31,33 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutPesquisa"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="418dp"
+            android:layout_height="345dp"
             tools:ignore="MissingConstraints">
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/outlinedTextField"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/label"
-                tools:ignore="MissingConstraints">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textInputEditText"
+                android:layout_width="219dp"
+                android:layout_height="43dp"
+                android:layout_marginBottom="24dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.272"
+                app:layout_constraintStart_toStartOf="parent" />
 
-            </com.google.android.material.textfield.TextInputLayout>
-
+            <Button
+                android:id="@+id/elevatedButton"
+                style="@style/Widget.Material3.Button.ElevatedButton"
+                android:layout_width="107dp"
+                android:layout_height="55dp"
+                android:layout_marginBottom="16dp"
+                android:shadowColor="@color/black"
+                android:text="Pesquisar"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.948"
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -97,6 +111,56 @@
                 app:layout_constraintStart_toEndOf="@+id/imageViewTres"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/rotas" />
+
+            <TextView
+                android:id="@+id/textViewRestaurantes"
+                android:layout_width="92dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/textViewRestaurantes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/textViewOndeIr"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <TextView
+                android:id="@+id/textViewOndeIr"
+                android:layout_width="60dp"
+                android:layout_height="16dp"
+                android:text="@string/textViewOndeIr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.401"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewServMedicos"
+                android:layout_width="60dp"
+                android:layout_height="16dp"
+                android:text="@string/textViewServMedicos"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.67"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textViewRotas"
+                android:layout_width="60dp"
+                android:layout_height="16dp"
+                android:text="@string/textViewRotas"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.952"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintVertical_bias="1.0" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -149,7 +213,8 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.571"
-                app:srcCompat="@drawable/_51910" />
+                app:srcCompat="@drawable/_51910"
+                tools:ignore="NotSibling,UnknownId" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -164,38 +229,19 @@
                 app:srcCompat="@drawable/_89708" />
 
             <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="60dp"
-                android:layout_height="55dp"
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="168dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.017"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@drawable/_341632" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="219dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="256dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/elevatedButton"
-            style="@style/Widget.Material3.Button.ElevatedButton"
-            android:layout_width="107dp"
-            android:layout_height="55dp"
-            android:layout_marginTop="244dp"
-            android:shadowColor="@color/black"
-            android:text="Pesquisar"
-            android:textSize="12dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.894"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

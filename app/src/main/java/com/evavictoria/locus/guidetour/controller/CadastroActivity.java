@@ -1,4 +1,4 @@
-package com.evavictoria.locus.guidetour;
+package com.evavictoria.locus.guidetour.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 

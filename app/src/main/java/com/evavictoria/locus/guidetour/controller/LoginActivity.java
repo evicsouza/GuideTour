@@ -1,10 +1,12 @@
-package com.evavictoria.locus.guidetour;
+package com.evavictoria.locus.guidetour.controller;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ActivityLogin extends AppCompatActivity {
+import com.evavictoria.locus.guidetour.R;
+
+public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

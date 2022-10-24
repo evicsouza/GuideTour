@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">GuideTour</string>
     <string name="botaoPesquisa"> Pesquisar </string>
+    <string name="textViewRestaurantes"> Restaurantes </string>
+    <string name="textViewRotas"> Rotas </string>
+    <string name="textViewServMedicos"> Serviços Médicos </string>
+    <string name="textViewOndeIr"> Onde ir </string>
 </resources>
