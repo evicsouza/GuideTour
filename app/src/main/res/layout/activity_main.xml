@@ -114,8 +114,8 @@
 
             <TextView
                 android:id="@+id/textViewRestaurantes"
-                android:layout_width="60dp"
-                android:layout_height="16dp"
+                android:layout_width="92dp"
+                android:layout_height="20dp"
                 android:layout_marginStart="16dp"
                 android:text="@string/textViewRestaurantes"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -160,15 +160,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
                 app:layout_constraintVertical_bias="1.0" />
-
-            <ImageView
-                android:id="@+id/imageView7"
-                android:layout_width="60dp"
-                android:layout_height="55dp"
-                app:srcCompat="@drawable/_341632"
-                tools:layout_editor_absoluteX="160dp"
-                tools:layout_editor_absoluteY="344dp"
-                tools:ignore="MissingConstraints" />
+            
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -235,6 +227,19 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/_89708" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="70dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="168dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/toolbar"
+                app:layout_constraintHorizontal_bias="0.017"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0"
+                app:srcCompat="@drawable/_341632" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
