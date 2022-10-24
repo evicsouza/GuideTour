@@ -160,7 +160,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
                 app:layout_constraintVertical_bias="1.0" />
-            
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -214,7 +214,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.571"
                 app:srcCompat="@drawable/_51910"
-                tools:ignore="NotSibling" />
+                tools:ignore="NotSibling,UnknownId" />
 
             <ImageView
                 android:id="@+id/imageView6"
