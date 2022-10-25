@@ -6,4 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".controller.RotasActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="371dp"
+        android:layout_height="364dp"
+        android:text="oiiiii teste" />
 </androidx.constraintlayout.widget.ConstraintLayout>
