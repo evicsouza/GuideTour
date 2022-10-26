@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutPrincipal"
@@ -38,7 +39,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditText"
                 android:layout_width="219dp"
-                android:layout_height="43dp"
+                android:layout_height="48dp"
                 android:layout_marginBottom="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -70,7 +71,7 @@
             app:layout_constraintTop_toBottomOf="@+id/imageFilterView">
 
             <ImageView
-                android:id="@+id/imageViewUm"
+                android:id="@+id/imageViewRestaurantes"
                 android:layout_width="74dp"
                 android:layout_height="82dp"
                 android:layout_marginStart="16dp"
@@ -78,39 +79,47 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.486"
-                app:srcCompat="@drawable/comida" />
+                app:srcCompat="@drawable/comida"
+                android:clickable="true"
+                android:onClick="botaoRestaurantes"/>
 
             <ImageView
-                android:id="@+id/imageViewDois"
+                android:id="@+id/imageViewOndeIr"
                 android:layout_width="74dp"
                 android:layout_height="82dp"
                 android:layout_marginStart="24dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageViewUm"
+                app:layout_constraintStart_toEndOf="@+id/imageViewRestaurantes"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.486"
-                app:srcCompat="@drawable/ondeir" />
+                app:srcCompat="@drawable/ondeir"
+                android:clickable="true"
+                android:onClick="botaoOndeIr"/>
 
             <ImageView
-                android:id="@+id/imageViewTres"
+                android:id="@+id/imageViewServ2Medicos"
                 android:layout_width="74dp"
                 android:layout_height="82dp"
                 android:layout_marginStart="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageViewDois"
+                app:layout_constraintStart_toEndOf="@+id/imageViewOndeIr"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.567"
-                app:srcCompat="@drawable/servmedicos" />
+                app:srcCompat="@drawable/servmedicos"
+                android:clickable="true"
+                android:onClick="botaoServMedicos"/>
 
             <ImageView
-                android:id="@+id/imageViewQuatro"
+                android:id="@+id/imageViewRotas"
                 android:layout_width="74dp"
                 android:layout_height="82dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageViewTres"
+                app:layout_constraintStart_toEndOf="@+id/imageViewServ2Medicos"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/rotas" />
+                app:srcCompat="@drawable/rotas"
+                android:clickable="true"
+                android:onClick="botaoRotas"/>
 
             <TextView
                 android:id="@+id/textViewRestaurantes"
@@ -122,7 +131,7 @@
                 app:layout_constraintEnd_toStartOf="@+id/textViewOndeIr"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
                 app:layout_constraintVertical_bias="0.25" />
 
             <TextView
@@ -134,7 +143,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.401"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
@@ -146,7 +155,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.67"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
@@ -158,7 +167,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.952"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageViewUm"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
                 app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
