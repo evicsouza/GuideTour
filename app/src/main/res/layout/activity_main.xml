@@ -81,7 +81,8 @@
                 app:layout_constraintVertical_bias="0.486"
                 app:srcCompat="@drawable/comida"
                 android:clickable="true"
-                android:onClick="botaoRestaurantes"/>
+
+                />
 
             <ImageView
                 android:id="@+id/imageViewOndeIr"
@@ -94,7 +95,7 @@
                 app:layout_constraintVertical_bias="0.486"
                 app:srcCompat="@drawable/ondeir"
                 android:clickable="true"
-                android:onClick="botaoOndeIr"/>
+                />
 
             <ImageView
                 android:id="@+id/imageViewServ2Medicos"
@@ -107,7 +108,7 @@
                 app:layout_constraintVertical_bias="0.567"
                 app:srcCompat="@drawable/servmedicos"
                 android:clickable="true"
-                android:onClick="botaoServMedicos"/>
+                />
 
             <ImageView
                 android:id="@+id/imageViewRotas"
@@ -119,7 +120,13 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/rotas"
                 android:clickable="true"
-                android:onClick="botaoRotas"/>
+                />
+            <androidx.fragment.app.FragmentContainerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/fragment_container_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.evavictoria.locus.guidetour.MainFragment" />
 
             <TextView
                 android:id="@+id/textViewRestaurantes"
