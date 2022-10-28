@@ -5,4 +5,15 @@
     <string name="textViewRotas"> Rotas </string>
     <string name="textViewServMedicos"> Serviços Médicos </string>
     <string name="textViewOndeIr"> Onde ir </string>
+    <string name="botaoTurismoReligiso"> Turismo Religioso </string>
+    <string name="botaoTurismoEcologico"> Turismo Ecológico </string>
+    <string name="botaoTurismoVinho"> Enoturismo </string>
+    <string name="Senha">Senha</string>
+    <string name="email">E-mail</string>
+    <string name="entrar"> Entrar </string>
+    <string name="nome">Nome</string>
+    <string name="salvar">Salvar</string>
+
+
+
 </resources>
