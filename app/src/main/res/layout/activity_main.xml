@@ -9,91 +9,184 @@
     tools:context=".MainActivity">
 
     <androidx.fragment.app.FragmentContainerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/fragment_container_view"
+        android:name="com.evavictoria.locus.guidetour.MainFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.evavictoria.locus.guidetour.MainFragment" />
+        tools:layout_editor_absoluteX="115dp"
+        tools:layout_editor_absoluteY="16dp" />
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/layoutRodape"
-            android:layout_width="412dp"
-            android:layout_height="59dp"
-            android:backgroundTint="@color/purple_200"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutRodape"
+        android:layout_width="417dp"
+        android:layout_height="95dp"
+        android:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar4"
+            android:layout_width="424dp"
+            android:layout_height="4dp"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            tools:layout_editor_absoluteX="-4dp"
+            tools:layout_editor_absoluteY="11dp" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="413dp"
+            android:layout_height="80dp"
+            android:background="@color/white"
+            android:backgroundTint="#FFFFFF"
+            android:fadingEdgeLength="200dp"
+            android:minHeight="?attr/actionBarSize"
+            android:outlineAmbientShadowColor="#191515"
+            android:theme="?attr/actionBarTheme"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <androidx.appcompat.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="65dp"
+            android:layout_height="72dp"
+            tools:layout_editor_absoluteX="258dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TextView
+                android:id="@+id/textContato"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/purple_200"
-                android:minHeight="?attr/actionBarSize"
-                android:theme="?attr/actionBarTheme"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:text="Contato"
+                android:textColor="#4860FD"
+                tools:layout_editor_absoluteX="4dp"
+                tools:layout_editor_absoluteY="49dp" />
 
-            <ImageView
-                android:id="@+id/imageView9"
-                android:layout_width="72dp"
-                android:layout_height="54dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView6"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/_250665" />
-
-            <ImageView
-                android:id="@+id/imageView8"
-                android:layout_width="73dp"
-                android:layout_height="59dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/_239343" />
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="67dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="88dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/imageView7"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.571"
-                app:srcCompat="@drawable/_51910"
-                tools:ignore="NotSibling,UnknownId" />
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="65dp"
-                android:layout_height="56dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.728"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"
-                app:srcCompat="@drawable/_89708" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="70dp"
-                android:layout_height="58dp"
-                android:layout_marginStart="168dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/toolbar"
-                app:layout_constraintHorizontal_bias="0.017"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/_341632" />
+            <ImageButton
+                android:id="@+id/bttContato"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:tint="#0274FD"
+                app:layout_constraintEnd_toEndOf="@+id/textContato"
+                app:layout_constraintStart_toStartOf="@+id/textContato"
+                app:srcCompat="@drawable/_89708"
+                tools:layout_editor_absoluteY="6dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="65dp"
+            android:layout_height="72dp"
+            tools:layout_editor_absoluteX="336dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TextView
+                android:id="@+id/textMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menu"
+                android:textColor="#4860FD"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+            <ImageButton
+                android:id="@+id/bttMenu"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:tint="#0274FD"
+                app:srcCompat="@drawable/_250665"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="6dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="65dp"
+            android:layout_height="72dp"
+            tools:layout_editor_absoluteX="176dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TextView
+                android:id="@+id/textQR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="QR-Code"
+                android:textColor="#4860FD"
+                tools:layout_editor_absoluteX="2dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+            <ImageButton
+                android:id="@+id/bttQr"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:tint="#0274FD"
+                app:layout_constraintEnd_toEndOf="@+id/textQR"
+                app:layout_constraintStart_toStartOf="@+id/textQR"
+                app:srcCompat="@drawable/_341632"
+                tools:layout_editor_absoluteY="6dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="65dp"
+            android:layout_height="72dp"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="16dp">
+
+            <TextView
+                android:id="@+id/textCurtidas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Curtidas"
+                android:textColor="#4860FD"
+                tools:layout_editor_absoluteX="3dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+            <ImageButton
+                android:id="@+id/bttCurtidas"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:tint="#0274FD"
+                app:layout_constraintEnd_toEndOf="@+id/textCurtidas"
+                app:layout_constraintStart_toStartOf="@+id/textCurtidas"
+                app:srcCompat="@drawable/_51910"
+                tools:layout_editor_absoluteY="6dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="65dp"
+            android:layout_height="72dp"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="17dp">
+
+            <TextView
+                android:id="@+id/textInicio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="false"
+                android:text="Início"
+                android:textColor="#4860FD"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="49dp" />
+
+            <ImageButton
+                android:id="@+id/bttInicio"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:background="#00FFFFFF"
+                android:tint="#0274FD"
+                app:srcCompat="@drawable/_239343"
+                tools:layout_editor_absoluteX="6dp"
+                tools:layout_editor_absoluteY="6dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 

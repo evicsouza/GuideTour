@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
-
+    android:background="#FDFCFC"
+    android:backgroundTint="#FFFFFF"
+    android:orientation="vertical">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,157 +17,107 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0">
 
-    <androidx.constraintlayout.utils.widget.ImageFilterView
-        android:id="@+id/imageFilterView"
-        android:layout_width="417dp"
-        android:layout_height="329dp"
-        android:layout_marginStart="4dp"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutBotoes"
+            android:layout_width="379dp"
+            android:layout_height="119dp"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="493dp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutPesquisa"
-        android:layout_width="418dp"
-        android:layout_height="345dp"
-        tools:ignore="MissingConstraints">
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar2"
+                android:layout_width="365dp"
+                android:layout_height="77dp"
+                android:layout_gravity="bottom"
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditText"
-            android:layout_width="219dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.272"
-            app:layout_constraintStart_toStartOf="parent" />
+                tools:layout_editor_absoluteX="7dp"
+                tools:layout_editor_absoluteY="21dp" />
 
-        <Button
-            android:id="@+id/elevatedButton"
-            style="@style/Widget.Material3.Button.ElevatedButton"
-            android:layout_width="107dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="16dp"
-            android:shadowColor="@color/black"
-            android:text="Pesquisar"
-            android:textSize="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.948"
-            app:layout_constraintStart_toStartOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="69dp"
+                android:layout_height="65dp"
+                android:background="@null"
+                android:tint="#355EF1"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="@+id/imageButton3"
+                app:srcCompat="@mipmap/bed_foreground"
+                tools:layout_editor_absoluteX="294dp" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/layoutBotoes"
-        android:layout_width="379dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="256dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageFilterView">
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="71dp"
+                android:layout_height="65dp"
+                android:background="@null"
+                android:tint="#355EF1"
+                app:srcCompat="@mipmap/food_foreground"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="26dp" />
 
-        <ImageView
-            android:id="@+id/imageViewRestaurantes"
-            android:layout_width="74dp"
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="71dp"
+                android:layout_height="64dp"
+                android:background="@null"
+                android:tint="#355EF1"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+                app:layout_constraintTop_toTopOf="@+id/imageButton5"
+                app:srcCompat="@mipmap/hospital_foreground"
+                tools:layout_editor_absoluteX="189dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="71dp"
+                android:layout_height="64dp"
+                android:background="@null"
+                android:tint="#355EF1"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+                app:layout_constraintTop_toTopOf="@+id/imageButton2"
+                app:srcCompat="@mipmap/mapa_foreground"
+                tools:layout_editor_absoluteX="99dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutPesquisa"
+            android:layout_width="423dp"
             android:layout_height="82dp"
-            android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.486"
-            app:srcCompat="@drawable/comida"
-            android:clickable="true"/>
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="-6dp"
+            tools:layout_editor_absoluteY="-2dp">
 
-        <ImageView
-            android:id="@+id/imageViewOndeIr"
-            android:layout_width="74dp"
-            android:layout_height="82dp"
-            android:layout_marginStart="24dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageViewRestaurantes"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.486"
-            app:srcCompat="@drawable/ondeir"
-            android:clickable="true"
-            />
 
-        <ImageView
-            android:id="@+id/imageViewServ2Medicos"
-            android:layout_width="74dp"
-            android:layout_height="82dp"
-            android:layout_marginStart="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageViewOndeIr"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.567"
-            app:srcCompat="@drawable/servmedicos"
-            android:clickable="true"
-            />
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="235dp"
+                android:layout_height="53dp"
+                android:background="@drawable/rounded_input"
 
-        <ImageView
-            android:id="@+id/imageViewRotas"
-            android:layout_width="74dp"
-            android:layout_height="82dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageViewServ2Medicos"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/rotas"
-            android:clickable="true"
-            />
 
-        <TextView
-            android:id="@+id/textViewRestaurantes"
-            android:layout_width="92dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="16dp"
-            android:text="@string/textViewRestaurantes"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textViewOndeIr"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
-            app:layout_constraintVertical_bias="0.25" />
+                android:drawableTint="#E6F6F3F3"
+                android:ems="10"
+                android:hint="Pesquisar"
+                android:paddingLeft="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/imageView2"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="15dp" />
 
-        <TextView
-            android:id="@+id/textViewOndeIr"
-            android:layout_width="60dp"
-            android:layout_height="16dp"
-            android:text="@string/textViewOndeIr"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.401"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="40dp"
+                android:layout_height="41dp"
+                android:layout_marginEnd="72dp"
+                android:tint="#0274FD"
+                app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+                app:srcCompat="@android:drawable/ic_menu_search" />
 
-        <TextView
-            android:id="@+id/textViewServMedicos"
-            android:layout_width="60dp"
-            android:layout_height="16dp"
-            android:text="@string/textViewServMedicos"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.67"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-            android:id="@+id/textViewRotas"
-            android:layout_width="60dp"
-            android:layout_height="16dp"
-            android:text="@string/textViewRotas"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.952"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageViewRestaurantes"
-            app:layout_constraintVertical_bias="1.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
