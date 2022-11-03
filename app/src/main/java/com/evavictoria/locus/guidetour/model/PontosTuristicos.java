@@ -9,13 +9,15 @@ public class PontosTuristicos {
     String descricao;
     Image foto;
     Geocoder localizacao;
+    CategoriaPontoTuristico categoria;
 
 
-    public PontosTuristicos(String nome, String descricao, Image foto, Geocoder localizacao) {
+    public PontosTuristicos(String nome, String descricao, Image foto, Geocoder localizacao, CategoriaPontoTuristico categoria) {
         this.nome = nome;
         this.descricao = descricao;
         this.foto = foto;
         this.localizacao = localizacao;
+        this.categoria = categoria;
     }
 
     public String getNome() {
@@ -42,11 +44,17 @@ public class PontosTuristicos {
         this.foto = foto;
     }
 
-    public Geocoder getLocalizacao() {
-        return localizacao;
-    }
+    public Geocoder getLocalizacao() { return localizacao; }
 
     public void setLocalizacao(Geocoder localizacao) {
         this.localizacao = localizacao;
+    }
+
+    public CategoriaPontoTuristico getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriaPontoTuristico categoria) {
+        this.categoria = categoria;
     }
 }
