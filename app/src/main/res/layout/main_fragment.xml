@@ -23,8 +23,12 @@
             android:id="@+id/layoutBotoes"
             android:layout_width="379dp"
             android:layout_height="119dp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="493dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.531"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.544">
 
             <com.google.android.material.bottomappbar.BottomAppBar
                 android:id="@+id/bottomAppBar2"
@@ -32,51 +36,75 @@
                 android:layout_height="77dp"
                 android:layout_gravity="bottom"
 
-                tools:layout_editor_absoluteX="7dp"
-                tools:layout_editor_absoluteY="21dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="69dp"
                 android:layout_height="65dp"
+                android:layout_marginStart="288dp"
+                android:layout_marginEnd="8dp"
                 android:background="@null"
-                android:tint="#355EF1"
                 app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+                app:layout_constraintEnd_toEndOf="@+id/bottomAppBar2"
+                app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
                 app:layout_constraintTop_toTopOf="@+id/imageButton3"
+                app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@mipmap/bed_foreground"
-                tools:layout_editor_absoluteX="294dp" />
+                tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
+                app:tint="#355EF1" />
 
             <ImageButton
                 android:id="@+id/imageButton2"
                 android:layout_width="71dp"
                 android:layout_height="65dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="286dp"
                 android:background="@null"
-                android:tint="#355EF1"
+                android:contentDescription="@string/Senha"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/bottomAppBar2"
+                app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
+                app:layout_constraintTop_toTopOf="@+id/bottomAppBar2"
+                app:layout_constraintVertical_bias="0.035"
                 app:srcCompat="@mipmap/food_foreground"
-                tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="26dp" />
+                app:tint="#355EF1" />
 
             <ImageButton
                 android:id="@+id/imageButton3"
                 android:layout_width="71dp"
                 android:layout_height="64dp"
+                android:layout_marginStart="194dp"
+                android:layout_marginEnd="22dp"
                 android:background="@null"
-                android:tint="#355EF1"
+                android:contentDescription="@string/app_name"
                 app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
                 app:layout_constraintTop_toTopOf="@+id/imageButton5"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/hospital_foreground"
-                tools:layout_editor_absoluteX="189dp" />
+                app:tint="#355EF1" />
 
             <ImageButton
                 android:id="@+id/imageButton5"
                 android:layout_width="71dp"
                 android:layout_height="64dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="24dp"
                 android:background="@null"
-                android:tint="#355EF1"
+                android:contentDescription="@string/app_name"
                 app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
+                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+                app:layout_constraintStart_toEndOf="@+id/imageButton2"
                 app:layout_constraintTop_toTopOf="@+id/imageButton2"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/mapa_foreground"
-                tools:layout_editor_absoluteX="99dp" />
+                app:tint="#355EF1" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -85,9 +113,13 @@
             android:id="@+id/layoutPesquisa"
             android:layout_width="423dp"
             android:layout_height="82dp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="-6dp"
-            tools:layout_editor_absoluteY="-2dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints">
 
 
             <EditText
@@ -101,21 +133,22 @@
                 android:ems="10"
                 android:hint="Pesquisar"
                 android:paddingLeft="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageView2"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="15dp" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="40dp"
                 android:layout_height="41dp"
                 android:layout_marginEnd="72dp"
-                android:tint="#0274FD"
                 app:layout_constraintBottom_toBottomOf="@+id/editTextTextPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
-                app:srcCompat="@android:drawable/ic_menu_search" />
+                app:srcCompat="@android:drawable/ic_menu_search"
+                app:tint="#0274FD" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
