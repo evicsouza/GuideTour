@@ -32,8 +32,9 @@
             android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
             android:theme="?attr/actionBarTheme"
-            tools:layout_editor_absoluteX="-4dp"
-            tools:layout_editor_absoluteY="11dp" />
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -48,41 +49,60 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            tools:layout_editor_absoluteX="258dp"
-            tools:layout_editor_absoluteY="16dp">
+            android:layout_marginEnd="92dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/toolbar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textContato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
                 android:text="Contato"
                 android:textColor="#4860FD"
-                tools:layout_editor_absoluteX="4dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bttContato" />
 
             <ImageButton
                 android:id="@+id/bttContato"
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
-                android:tint="#0274FD"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textContato"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/textContato"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/_89708"
-                tools:layout_editor_absoluteY="6dp" />
+                app:tint="#0274FD" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout5"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            tools:layout_editor_absoluteX="336dp"
-            tools:layout_editor_absoluteY="16dp">
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textMenu"
@@ -90,25 +110,33 @@
                 android:layout_height="wrap_content"
                 android:text="Menu"
                 android:textColor="#4860FD"
-                tools:layout_editor_absoluteX="14dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
                 android:id="@+id/bttMenu"
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
-                android:tint="#0274FD"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toTopOf="@+id/textMenu"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/_250665"
-                tools:layout_editor_absoluteX="6dp"
-                tools:layout_editor_absoluteY="6dp" />
+                app:tint="#0274FD" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout2"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            tools:layout_editor_absoluteX="176dp"
-            tools:layout_editor_absoluteY="16dp">
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.727">
 
             <TextView
                 android:id="@+id/textQR"
@@ -116,74 +144,105 @@
                 android:layout_height="wrap_content"
                 android:text="QR-Code"
                 android:textColor="#4860FD"
-                tools:layout_editor_absoluteX="2dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
             <ImageButton
                 android:id="@+id/bttQr"
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
-                android:tint="#0274FD"
+                android:contentDescription="@string/Senha"
+                app:layout_constraintBottom_toBottomOf="@+id/textQR"
                 app:layout_constraintEnd_toEndOf="@+id/textQR"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/textQR"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@drawable/_341632"
-                tools:layout_editor_absoluteY="6dp" />
+                app:tint="#0274FD" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            tools:layout_editor_absoluteX="93dp"
-            tools:layout_editor_absoluteY="16dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.272"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textCurtidas"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
                 android:text="Curtidas"
                 android:textColor="#4860FD"
-                tools:layout_editor_absoluteX="3dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bttCurtidas" />
 
             <ImageButton
                 android:id="@+id/bttCurtidas"
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
-                android:tint="#0274FD"
+                android:contentDescription="@string/app_name"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/textCurtidas"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="@+id/textCurtidas"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.041"
                 app:srcCompat="@drawable/_51910"
-                tools:layout_editor_absoluteY="6dp" />
+                app:tint="#0274FD" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="17dp">
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textInicio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:clickable="false"
                 android:text="Início"
                 android:textColor="#4860FD"
-                tools:layout_editor_absoluteX="14dp"
-                tools:layout_editor_absoluteY="49dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.516"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
 
             <ImageButton
                 android:id="@+id/bttInicio"
                 android:layout_width="50dp"
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
-                android:tint="#0274FD"
+                android:contentDescription="@string/Senha"
+                app:layout_constraintBottom_toBottomOf="@+id/textInicio"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.4"
                 app:srcCompat="@drawable/_239343"
-                tools:layout_editor_absoluteX="6dp"
-                tools:layout_editor_absoluteY="6dp" />
+                app:tint="#0274FD" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
