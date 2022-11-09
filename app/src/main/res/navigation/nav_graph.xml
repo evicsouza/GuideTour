@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.evavictoria.locus.guidetour.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_restaurantesFragment"
+            app:destination="@id/restaurantesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_rotasFragment"
+            app:destination="@id/rotasFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_ondeIrFragment"
+            app:destination="@id/ondeIrFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_servMedicosFragment"
+            app:destination="@id/servMedicosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/restaurantesFragment"
+        android:name="com.evavictoria.locus.guidetour.RestaurantesFragment"
+        android:label="fragment_restaurantes"
+        tools:layout="@layout/fragment_restaurantes" />
+    <fragment
+        android:id="@+id/rotasFragment"
+        android:name="com.evavictoria.locus.guidetour.RotasFragment"
+        android:label="fragment_rotas"
+        tools:layout="@layout/fragment_rotas" />
+    <fragment
+        android:id="@+id/ondeIrFragment"
+        android:name="com.evavictoria.locus.guidetour.OndeIrFragment"
+        android:label="fragment_onde_ir"
+        tools:layout="@layout/fragment_onde_ir" />
+    <fragment
+        android:id="@+id/servMedicosFragment"
+        android:name="com.evavictoria.locus.guidetour.ServMedicosFragment"
+        android:label="fragment_serv_medicos"
+        tools:layout="@layout/fragment_serv_medicos" />
+</navigation>

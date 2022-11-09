@@ -2,75 +2,79 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayoutMainCadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.CadastroActivity" >
+    tools:context=".CadastroFragment" >
 
-    <EditText
-        android:id="@+id/editTextNomeCadastro"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="156dp"
-        android:background="@drawable/rounded_input"
-        android:ems="10"
-        android:hint="@string/nome"
-        android:inputType="textPersonName"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/buttonCadastrar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_button"
-        android:text="@string/salvar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCadastro" />
+        <Button
+            android:id="@+id/buttonCadastrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            android:background="@drawable/rounded_button"
+            android:text="@string/salvar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.828"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmailCadastro" />
 
-    <EditText
-        android:id="@+id/editTextEmailCadastro"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/rounded_input"
-        android:ems="10"
-        android:hint="@string/email"
-        android:inputType="textPersonName"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" />
+        <EditText
+            android:id="@+id/editTextEmailCadastro"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/rounded_input"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextSenhaCadastro" />
 
-    <EditText
-        android:id="@+id/editTextSenhaCadastro"
-        android:layout_width="301dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rounded_input"
-        android:ems="10"
-        android:hint="@string/Senha"
-        android:inputType="textPassword"
-        android:paddingLeft="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeCadastro" />
+        <EditText
+            android:id="@+id/editTextNomeCadastro"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="115dp"
+            android:background="@drawable/rounded_input"
+            android:ems="10"
+            android:hint="@string/nome"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView2" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Cadastro"
-        android:textSize="48sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="Cadastro"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextSenhaCadastro"
+            android:layout_width="301dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/rounded_input"
+            android:ems="10"
+            android:hint="@string/Senha"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editTextNomeCadastro" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

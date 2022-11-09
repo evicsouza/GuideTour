@@ -5,38 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/contraintLayoutMainLogin"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"><![CDATA[
-    tools:context=".ActivityLogin">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    ]]>
+    android:layout_height="match_parent"
+    tools:context=".LoginFragment">
 
     <EditText
         android:id="@+id/editTextTextPersonName2"
