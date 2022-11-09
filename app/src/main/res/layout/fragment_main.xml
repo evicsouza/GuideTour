@@ -45,16 +45,16 @@
                 tools:ignore="BottomAppBar" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButtonHospedagens"
                 android:layout_width="69dp"
                 android:layout_height="65dp"
                 android:layout_marginStart="288dp"
                 android:layout_marginEnd="8dp"
                 android:background="@null"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton3"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonServMedicos"
                 app:layout_constraintEnd_toEndOf="@+id/bottomAppBar2"
                 app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
-                app:layout_constraintTop_toTopOf="@+id/imageButton3"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonServMedicos"
                 app:layout_constraintVertical_bias="1.0"
                 app:srcCompat="@mipmap/bed_foreground"
                 tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck"
@@ -62,7 +62,7 @@
                 />
 
             <ImageButton
-                android:id="@+id/imageButton2"
+                android:id="@+id/imageButtonRestaurantes"
                 android:layout_width="71dp"
                 android:layout_height="65dp"
                 android:layout_marginStart="8dp"
@@ -79,33 +79,33 @@
                 app:tint="#355EF1" />
 
             <ImageButton
-                android:id="@+id/imageButton3"
+                android:id="@+id/imageButtonServMedicos"
                 android:layout_width="71dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="194dp"
                 android:layout_marginEnd="22dp"
                 android:background="@null"
                 android:contentDescription="@string/app_name"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonRotas"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonHospedagens"
                 app:layout_constraintStart_toStartOf="@+id/bottomAppBar2"
-                app:layout_constraintTop_toTopOf="@+id/imageButton5"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonRotas"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/hospital_foreground"
                 app:tint="#355EF1" />
 
             <ImageButton
-                android:id="@+id/imageButton5"
+                android:id="@+id/imageButtonRotas"
                 android:layout_width="71dp"
                 android:layout_height="64dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="24dp"
                 android:background="@null"
                 android:contentDescription="@string/app_name"
-                app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-                app:layout_constraintEnd_toStartOf="@+id/imageButton3"
-                app:layout_constraintStart_toEndOf="@+id/imageButton2"
-                app:layout_constraintTop_toTopOf="@+id/imageButton2"
+                app:layout_constraintBottom_toBottomOf="@+id/imageButtonRestaurantes"
+                app:layout_constraintEnd_toStartOf="@+id/imageButtonServMedicos"
+                app:layout_constraintStart_toEndOf="@+id/imageButtonRestaurantes"
+                app:layout_constraintTop_toTopOf="@+id/imageButtonRestaurantes"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/mapa_foreground"
                 app:tint="#355EF1" />
