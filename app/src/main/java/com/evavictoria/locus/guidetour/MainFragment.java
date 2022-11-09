@@ -21,22 +21,22 @@ public class MainFragment extends Fragment {
    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentMainBinding.bind(view);
+        binding.imageButtonRotas.setOnClickListener(Navigation
+                .createNavigateOnClickListener(R.id.rotasFragment, null));
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-            super.onCreateView(inflater, container, savedInstanceState);
-            View view = binding.getRoot();
-            return view;
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
     @Override
     public void onDestroyView() {
@@ -44,12 +44,8 @@ public class MainFragment extends Fragment {
         binding = null;
     }
 
-    public void botaoRotas(View view) {
-        binding.imageButtonRotas.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.createNavigateOnClickListener(R.id.FragmentRotas, null);
-            }
-        });
-    }
+//    public void botaoRotas(View view) {
+//        binding.imageButtonRotas.setOnClickListener(Navigation
+//                .createNavigateOnClickListener(R.id.FragmentRotas, null));
+//    }
 }
