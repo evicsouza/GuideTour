@@ -108,7 +108,8 @@
                 app:layout_constraintTop_toTopOf="@+id/imageButtonRestaurantes"
                 app:layout_constraintVertical_bias="0.0"
                 app:srcCompat="@mipmap/mapa_foreground"
-                app:tint="#355EF1" />
+                app:tint="#355EF1"
+                android:onClick="botaoRotas"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
