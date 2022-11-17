@@ -2,14 +2,14 @@ package com.evavictoria.locus.guidetour.model;
 
 import android.location.Geocoder;
 
-public class Restaurantes {
+public class Restaurante {
 
     String nome;
     CategoriaRestaurantes categoria;
     String endereco;
     Geocoder localizacao;
 
-    public Restaurantes(String nome, CategoriaRestaurantes categoria, String endereco, Geocoder localizacao) {
+    public Restaurante(String nome, CategoriaRestaurantes categoria, String endereco, Geocoder localizacao) {
         this.nome = nome;
         this.categoria = categoria;
         this.endereco = endereco;

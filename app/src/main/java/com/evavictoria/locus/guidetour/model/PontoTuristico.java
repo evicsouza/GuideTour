@@ -3,22 +3,15 @@ package com.evavictoria.locus.guidetour.model;
 import android.location.Geocoder;
 import android.media.Image;
 
-public class PontosTuristicos {
+public class PontoTuristico implements ColecaoFirebase{
 
     String nome;
     String descricao;
     Image foto;
     Geocoder localizacao;
     CategoriaPontoTuristico categoria;
+    String caminho = "pontosTuristicos";
 
-
-    public PontosTuristicos(String nome, String descricao, Image foto, Geocoder localizacao, CategoriaPontoTuristico categoria) {
-        this.nome = nome;
-        this.descricao = descricao;
-        this.foto = foto;
-        this.localizacao = localizacao;
-        this.categoria = categoria;
-    }
 
     public String getNome() {
         return nome;
@@ -56,5 +49,13 @@ public class PontosTuristicos {
 
     public void setCategoria(CategoriaPontoTuristico categoria) {
         this.categoria = categoria;
+    }
+
+    public PontoTuristico() {
+    }
+
+    @Override
+    public String getCaminho() {
+        return caminho;
     }
 }

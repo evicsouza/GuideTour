@@ -2,7 +2,7 @@ package com.evavictoria.locus.guidetour.model;
 
 import android.location.Geocoder;
 
-public class Hospedagens {
+public class Hospedagem {
 
     String nome;
     String contato;
@@ -10,7 +10,7 @@ public class Hospedagens {
     Geocoder localizacao;
     CategoriaHospedagens categoria;
 
-    public Hospedagens(String nome, String contato, String endereco, Geocoder localizacao, CategoriaHospedagens categoria) {
+    public Hospedagem(String nome, String contato, String endereco, Geocoder localizacao, CategoriaHospedagens categoria) {
         this.nome = nome;
         this.contato = contato;
         this.endereco = endereco;
