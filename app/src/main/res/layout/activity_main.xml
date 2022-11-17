@@ -62,24 +62,25 @@
             android:layout_width="65dp"
             android:layout_height="72dp"
             android:layout_marginEnd="92dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
             app:layout_constraintEnd_toEndOf="@+id/toolbar"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout2"
             app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textContato"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
                 android:text="Contato"
                 android:textColor="#4860FD"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.533"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bttContato" />
+                app:layout_constraintTop_toBottomOf="@+id/bttContato"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
                 android:id="@+id/bttContato"
@@ -103,16 +104,17 @@
             android:layout_width="65dp"
             android:layout_height="72dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/constraintLayout3"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout3"
             app:layout_constraintVertical_bias="0.695">
 
             <TextView
                 android:id="@+id/textMenu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="Menu"
                 android:textColor="#4860FD"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -125,7 +127,6 @@
                 android:layout_height="48dp"
                 android:background="#00FFFFFF"
                 android:contentDescription="@string/app_name"
-                app:layout_constraintBottom_toTopOf="@+id/textMenu"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -137,16 +138,17 @@
             android:id="@+id/constraintLayout2"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/toolbar"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout6"
             app:layout_constraintVertical_bias="0.727">
 
             <TextView
                 android:id="@+id/textQR"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
                 android:text="QR-Code"
                 android:textColor="#4860FD"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -174,11 +176,11 @@
             android:id="@+id/constraintLayout6"
             android:layout_width="65dp"
             android:layout_height="72dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.272"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/constraintLayout"
             app:layout_constraintVertical_bias="0.695">
 
             <TextView
@@ -191,7 +193,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/bttCurtidas" />
+                app:layout_constraintTop_toTopOf="@+id/bttCurtidas"
+                app:layout_constraintVertical_bias="0.0" />
 
             <ImageButton
                 android:id="@+id/bttCurtidas"
@@ -231,7 +234,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.516"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bttInicio"
                 app:layout_constraintVertical_bias="1.0" />
 
             <ImageButton
@@ -245,7 +248,7 @@
                 app:layout_constraintHorizontal_bias="0.466"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.4"
+                app:layout_constraintVertical_bias="0.05"
                 app:srcCompat="@drawable/_239343"
                 app:tint="#0274FD" />
         </androidx.constraintlayout.widget.ConstraintLayout>
