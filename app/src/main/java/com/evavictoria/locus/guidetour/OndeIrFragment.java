@@ -2,12 +2,15 @@ package com.evavictoria.locus.guidetour;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentOndeIrBinding;
 
 public class OndeIrFragment extends Fragment {
@@ -25,9 +28,16 @@ public class OndeIrFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding = FragmentOndeIrBinding.bind(view);
+    }
+
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_onde_ir, container, false);
     }
+
 }
