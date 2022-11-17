@@ -79,16 +79,28 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/editTextTextPassword2" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="305dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="56dp"
+        android:text="Sign-in with google"
+        app:icon="@mipmap/google_foreground"
+        app:iconSize="60dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="145dp"
-        android:layout_height="29dp"
-        android:layout_marginBottom="112dp"
-        android:text="Continuar com"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="72dp"
+        android:text="Esqueceu a senha ?"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

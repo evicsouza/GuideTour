@@ -7,6 +7,20 @@
     android:layout_height="match_parent"
     tools:context=".controller.CadastroActivity" >
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="305dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="52dp"
+        android:text="Sign-up with google"
+        app:icon="@mipmap/google_foreground"
+        app:iconSize="60dp"
+        app:iconTint="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCadastrar" />
+
     <EditText
         android:id="@+id/editTextNomeCadastro"
         android:layout_width="301dp"
