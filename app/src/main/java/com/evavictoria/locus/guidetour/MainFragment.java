@@ -29,11 +29,11 @@ public class MainFragment extends Fragment {
         binding = FragmentMainBinding.bind(view);
         binding.imageButtonRotas.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.rotasFragment, null));
-        binding.imageButtonRestaurantes.setOnClickListener(Navigation
+        binding.imageButtonRestaurantes2.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.restaurantesFragment, null));
         binding.imageButtonServMedicos.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.servMedicosFragment, null));
-        binding.imageButtonHospedagens.setOnClickListener(Navigation
+        binding.imageButtonHospedagem.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.hospedagensFragment, null));
    }
 

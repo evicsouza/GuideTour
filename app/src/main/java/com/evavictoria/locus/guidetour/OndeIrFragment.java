@@ -10,12 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentOndeIrBinding;
+import com.evavictoria.locus.guidetour.viewmodel.RotasViewModel;
 
 public class OndeIrFragment extends Fragment {
 
     FragmentOndeIrBinding binding;
+    RotasViewModel viewModel;
 
     public OndeIrFragment() {
         // Required empty public constructor
@@ -31,6 +32,8 @@ public class OndeIrFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentOndeIrBinding.bind(view);
+       // viewModel.recuperarDados();
+
     }
 
     @Override

@@ -39,14 +39,39 @@ public class GuideTourRepository {
         return guideTourRepository;
     }
 
-    public void recuperarDados(ColecaoFirebase documento) {
-        DocumentReference docRef = db.collection(documento.getCaminho().toString()).document(documento.getCaminho().toString());
-        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                PontoTuristico pontoTuristico = documentSnapshot.toObject(PontoTuristico.class);
-            }
-        });
+//    public void recuperarDados(ColecaoFirebase documento, Class classe) {
+//       db.collection(documento.getCaminho().toString())
+//               .get()
+//               .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//            @SuppressLint("RestrictedApi")
+//            @Override
+//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                if (task.isSuccessful()) {
+//                    for (QueryDocumentSnapshot document : task.getResult()) {
+//                        ColecaoFirebase c = (ColecaoFirebase) document.toObject(classe);
+//                    }
+//                } else {
+//                    Log.d(TAG, "Error getting documents: ", task.getException());
+//                }
+//            }
+//        });
+//    }
+    public void recuperarDados(){
+        db.collection("pontosTuristicos")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @SuppressLint("RestrictedApi")
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                Log.d(TAG, document.getId() + " => " + document.getData());
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
+                        }
+                    }
+                });
     }
 
 
