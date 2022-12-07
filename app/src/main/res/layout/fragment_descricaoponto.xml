@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".descricaopontoFragment">
+    tools:context=".DescricaopontoFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/imageView3"
+            android:id="@+id/fotoPontoTuristico"
             android:layout_width="402dp"
             android:layout_height="263dp"
             android:layout_marginTop="140dp"
@@ -29,10 +29,11 @@
             android:layout_marginTop="140dp"
             android:layout_marginEnd="8dp"
             android:background="@null"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/_51910"
-            android:tint="#355EF1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#355EF1" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -43,14 +44,14 @@
             app:cardElevation="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView3">
+            app:layout_constraintTop_toBottomOf="@+id/fotoPontoTuristico">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/textView8"
+                    android:id="@+id/nomePontoTuristico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -61,7 +62,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/categoriaPontoTuristico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
@@ -72,17 +73,17 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/descricaoPontoTuristico"
                     android:layout_width="367dp"
                     android:layout_height="151dp"
                     android:layout_marginTop="13dp"
                     android:text="TextView"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                    app:layout_constraintTop_toBottomOf="@+id/categoriaPontoTuristico" />
 
                 <TextView
-                    android:id="@+id/textView11"
+                    android:id="@+id/localizacaoPontoTuristico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -90,10 +91,10 @@
                     android:text="Localização"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                    app:layout_constraintTop_toBottomOf="@+id/descricaoPontoTuristico" />
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/horarioFunc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -101,7 +102,7 @@
                     android:text="Horário de Funcionamento"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                    app:layout_constraintTop_toBottomOf="@+id/localizacaoPontoTuristico" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 

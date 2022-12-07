@@ -29,13 +29,13 @@ public class RotasViewModel extends ViewModel {
     // Handle business logic
     private void loadUsers() {
         // Do an asynchronous operation to fetch users.
-        guideTourRepository.recuperarDados();
+        guideTourRepository.recuperarDadosPontosTuristicos();
     }
 
 
     public void recuperarDados(){
 
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
-        guideTourRepository.recuperarDados();
+        guideTourRepository.recuperarDadosPontosTuristicos();
     }
 }

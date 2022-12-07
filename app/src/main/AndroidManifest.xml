@@ -14,22 +14,6 @@
         android:theme="@style/Theme.GuideTour"
         tools:targetApi="31">
         <activity
-            android:name=".controller.RotasActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity
-            android:name=".controller.ServmedicosActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity
-            android:name=".controller.RestaurantesActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity
-            android:name=".controller.OndeirActivity"
-            android:label="@string/app_name">
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
