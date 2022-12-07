@@ -4,5 +4,6 @@ public enum CategoriaPontoTuristico {
 
     RELIGIOSO,
     ECOLOGICO,
+    LOCAL,
     ENOTURISMO;
 }

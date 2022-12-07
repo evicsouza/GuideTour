@@ -1,17 +1,15 @@
 package com.evavictoria.locus.guidetour;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.evavictoria.locus.guidetour.databinding.FragmentOndeIrBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentRotasBinding;
 import com.evavictoria.locus.guidetour.viewmodel.RotasViewModel;
 
@@ -28,7 +26,7 @@ public class RotasFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(RotasViewModel.class);
         viewModel.getUsers().observe(this, users -> {
             // update UI
-            viewModel.recuperarDados();
+         //   viewModel.recuperarDados();
         });
     }
 

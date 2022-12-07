@@ -1,16 +1,23 @@
 package com.evavictoria.locus.guidetour;
 
+import static androidx.fragment.app.FragmentManager.TAG;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.android.gms.auth.api.identity.SignInCredential;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -34,12 +41,13 @@ public class LoginFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
+
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = firebaseAuth.getCurrentUser();
-       // updateUI(currentUser);
+       // FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+        // updateUI(currentUser);
     }
 
 //    @Override
@@ -53,6 +61,7 @@ public class LoginFragment extends Fragment {
 //            AuthCredential firebaseCredential = GoogleAuthProvider.getCredential(idToken, null);
 //            firebaseAuth.signInWithCredential(firebaseCredential)
 //                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+//                        @SuppressLint("RestrictedApi")
 //                        @Override
 //                        public void onComplete(@NonNull Task<AuthResult> task) {
 //                            if (task.isSuccessful()) {
@@ -69,6 +78,6 @@ public class LoginFragment extends Fragment {
 //                    });
 //        }
 //    }
-
-//    FirebaseAuth.getInstance().signOut();
 }
+
+    //FirebaseAuth.getInstance().signOut();
