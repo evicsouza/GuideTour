@@ -14,7 +14,7 @@ import java.util.List;
 public class RotasViewModel extends ViewModel {
 
     PontoTuristico pontoTuristico;
-    GuideTourRepository guideTourRepository;
+    GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
     ColecaoFirebase documento;
 
     private MutableLiveData<List<User>> users;
