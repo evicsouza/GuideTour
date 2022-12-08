@@ -42,4 +42,9 @@
         android:name="com.evavictoria.locus.guidetour.HospedagensFragment"
         android:label="fragment_hospedagens"
         tools:layout="@layout/fragment_hospedagens" />
+    <fragment
+        android:id="@+id/localizacaoFragment"
+        android:name="com.evavictoria.locus.guidetour.LocalizacaoFragment"
+        android:label="fragment_localizacao"
+        tools:layout="@layout/fragment_localizacao" />
 </navigation>
