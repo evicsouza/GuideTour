@@ -6,6 +6,7 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.MutableLiveData;
 
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -14,6 +15,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GuideTourRepository {
@@ -50,7 +52,9 @@ public class GuideTourRepository {
 //            }
 //        });
 //    }
-    public void recuperarDadosPontosTuristicos(){
+    public MutableLiveData<List<PontoTuristico>> recuperarDadosPontosTuristicos(){
+        MutableLiveData<List<PontoTuristico>> dados = new MutableLiveData<List<PontoTuristico>>();
+        List<PontoTuristico> pontosTuristicos = new ArrayList<>();
         docRef =
             db.collection("pontosTuristicos")
                     .get()
@@ -60,13 +64,16 @@ public class GuideTourRepository {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
+                                    pontosTuristicos.add(new PontoTuristico());
                                     Log.d(TAG, document.getId() + " => " + document.getData());
                                 }
+                                dados.setValue(pontosTuristicos);
                             } else {
                                 Log.d(TAG, "Error getting documents: ", task.getException());
                             }
                         }
                     });
+        return dados;
     }
 
 
