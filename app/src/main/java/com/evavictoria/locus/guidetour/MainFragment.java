@@ -34,7 +34,7 @@ public class MainFragment extends Fragment {
         binding.imageButtonServMedicos.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.servMedicosFragment, null));
         binding.imageButtonHospedagem.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.hospedagensFragment, null));
+                .createNavigateOnClickListener(R.id.localizacaoFragment, null));
    }
 
     @Override
