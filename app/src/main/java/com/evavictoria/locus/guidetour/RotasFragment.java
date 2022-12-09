@@ -19,24 +19,24 @@ public class RotasFragment extends Fragment {
     FragmentRotasBinding binding;
     RotasViewModel viewModel;
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding = FragmentRotasBinding.bind(view);
+        // viewModel.recuperarDados();
+
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(RotasViewModel.class);
-        viewModel.getUsers().observe(this, users -> {
-            // update UI
-         //   viewModel.recuperarDados();
+        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
+            binding.nomePontoTuristicoRotas.setText(viewModel.retornaNome());
+            binding.descricaoPontoTuristicoRotas.setText(viewModel.retornaDescricao());
         });
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        binding = FragmentRotasBinding.bind(view);
-       // viewModel.recuperarDados();
-
-    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

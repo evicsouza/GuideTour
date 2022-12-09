@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentDescricaopontoBinding;
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
@@ -21,26 +22,26 @@ public class DescricaopontoFragment extends Fragment {
 
     FragmentDescricaopontoBinding binding;
     DescricaoPontoTuristicoViewModel viewModel;
-    //private RecyclerView recyclerview;
+    private RecyclerView recyclerview;
     private List<PontoTuristico> mTelfoneFixo;
     private GuideTourAdapter guideTourAdapter;
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
-        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
-
-
-        });
-    }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentDescricaopontoBinding.bind(view);
         //recyclerview = (TextView) view.findViewById(R.id.descricaoPontoTuristico);
-        binding.nomePontoTuristico.setText("Teste");
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
+        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
+            binding.nomePontoTuristico.setText(viewModel.retornaNome());
+            binding.descricaoPontoTuristico.setText(viewModel.retornaDescricao());
+        });
     }
 
     @Override

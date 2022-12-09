@@ -9,8 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
+import com.evavictoria.locus.guidetour.model.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -24,7 +28,9 @@ public class GuideTourRepository {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static Task<QuerySnapshot> docRef;
     public static List<QueryDocumentSnapshot> docs;
-    PontoTuristico pontoTuristico;
+    public PontoTuristico pontoTuristico;
+    List<Usuario> usuarios = new ArrayList<>();
+
 
     public synchronized static GuideTourRepository getInstance() {
         if (guideTourRepository == null) {
@@ -64,10 +70,15 @@ public class GuideTourRepository {
                         public void onComplete(@NonNull Task<QuerySnapshot> task) {
                             if (task.isSuccessful()) {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
-                                    pontosTuristicos.add(new PontoTuristico());
+                                    PontoTuristico pt = new PontoTuristico();
+                                    pt.setNome(document.getString("nome"));
+                                    pt.setDescricao(document.getString("descricao"));
+                                    pontoTuristico = pt;
+                                   // pt.setCategoria((CategoriaPontoTuristico) document.get("categoria"));
+                                    pontosTuristicos.add(pt);
                                     Log.d(TAG, document.getId() + " => " + document.getData());
                                 }
-                                dados.setValue(pontosTuristicos);
+                               dados.setValue(pontosTuristicos);
                             } else {
                                 Log.d(TAG, "Error getting documents: ", task.getException());
                             }
@@ -77,6 +88,26 @@ public class GuideTourRepository {
     }
 
 
+    public void salvarDadosCadastro(Usuario usuario){
+        db.collection("usuarios")
+                .add(usuario)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @SuppressLint("RestrictedApi")
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        usuarios.add(usuario);
+                        Log.d(TAG, "DocumentSnapshot written with ID: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @SuppressLint("RestrictedApi")
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.w(TAG, "Error adding document", e);
+                    }
+                });
+
+    }
     private GuideTourRepository() {
     }
 
