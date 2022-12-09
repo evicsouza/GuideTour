@@ -28,7 +28,7 @@ public class GuideTourRepository {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     public static Task<QuerySnapshot> docRef;
     public static List<QueryDocumentSnapshot> docs;
-    PontoTuristico pontoTuristico;
+    public PontoTuristico pontoTuristico;
     List<Usuario> usuarios = new ArrayList<>();
 
 
@@ -72,10 +72,13 @@ public class GuideTourRepository {
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     PontoTuristico pt = new PontoTuristico();
                                     pt.setNome(document.getString("nome"));
+                                    pt.setDescricao(document.getString("descricao"));
+                                    pontoTuristico = pt;
+                                   // pt.setCategoria((CategoriaPontoTuristico) document.get("categoria"));
                                     pontosTuristicos.add(pt);
                                     Log.d(TAG, document.getId() + " => " + document.getData());
                                 }
-                                dados.setValue(pontosTuristicos);
+                               dados.setValue(pontosTuristicos);
                             } else {
                                 Log.d(TAG, "Error getting documents: ", task.getException());
                             }

@@ -27,20 +27,21 @@ public class DescricaopontoFragment extends Fragment {
     private GuideTourAdapter guideTourAdapter;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
-        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
-            recyclerview.setAdapter(guideTourAdapter);
-        });
-    }
-
-    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentDescricaopontoBinding.bind(view);
         //recyclerview = (TextView) view.findViewById(R.id.descricaoPontoTuristico);
-        binding.nomePontoTuristico.setText("Teste");
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
+        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
+            binding.nomePontoTuristico.setText(viewModel.retornaNome());
+            binding.descricaoPontoTuristico.setText(viewModel.retornaDescricao());
+        });
     }
 
     @Override

@@ -36,8 +36,11 @@ public class DescricaoPontoTuristicoViewModel extends ViewModel {
        return guideTourRepository.recuperarDadosPontosTuristicos();
     }
 
-    public void recuperarNome(){
-
+    public String retornaNome(){
+        return guideTourRepository.pontoTuristico.getNome();
+    }
+    public String retornaDescricao(){
+        return guideTourRepository.pontoTuristico.getDescricao();
     }
 
 //    public void ler() {
