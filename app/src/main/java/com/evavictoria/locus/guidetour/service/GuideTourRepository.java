@@ -2,8 +2,11 @@ package com.evavictoria.locus.guidetour.service;
 
 import static androidx.fragment.app.FragmentManager.TAG;
 
+import static java.security.AccessController.getContext;
+
 import android.annotation.SuppressLint;
 import android.util.Log;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -31,7 +34,7 @@ public class GuideTourRepository {
     public static Task<QuerySnapshot> docRef;
     public static List<QueryDocumentSnapshot> docs;
     public PontoTuristico pontoTuristico;
-    List<Usuario> usuarios = new ArrayList<>();
+    public List<Usuario> usuarios = new ArrayList<>();
 
 
     public synchronized static GuideTourRepository getInstance() {
@@ -92,6 +95,7 @@ public class GuideTourRepository {
 
     public List<Usuario> recuperarDadosUsuarios(){
         MutableLiveData<List<Usuario>> dados = new MutableLiveData<List<Usuario>>();
+
         docRef =
                 db.collection("usuarios")
                         .get()
@@ -101,14 +105,18 @@ public class GuideTourRepository {
                             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                                 if (task.isSuccessful()) {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
-                                        Usuario u = new Usuario();
-                                        u.setNome(document.getString("nome"));
-                                        u.setEmail(document.getString("email"));
-                                        u.setSenha(document.getString("senha"));
 
-                                        usuarios.add(u);
-                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                            Usuario u = new Usuario();
+                                            u.setNome(document.getString("nome"));
+                                            u.setEmail(document.getString("email"));
+                                            u.setSenha(document.getString("senha"));
+
+                                            usuarios.add(u);
+
+                                            Log.d(TAG, document.getId() + " => " + document.getData());
+
                                     }
+
                                     dados.setValue(usuarios);
                                 } else {
                                     Log.d(TAG, "Error getting documents: ", task.getException());
