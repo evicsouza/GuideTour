@@ -19,8 +19,8 @@
             android:id="@+id/action_mainFragment_to_servMedicosFragment"
             app:destination="@id/servMedicosFragment" />
         <action
-            android:id="@+id/action_mainFragment_to_hospedagensFragment"
-            app:destination="@id/hospedagensFragment" />
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/restaurantesFragment"
@@ -47,4 +47,23 @@
         android:name="com.evavictoria.locus.guidetour.LocalizacaoFragment"
         android:label="fragment_localizacao"
         tools:layout="@layout/fragment_localizacao" />
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="com.evavictoria.locus.guidetour.CadastroFragment"
+        android:label="fragment_cadastro"
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_mainFragment2"
+            app:destination="@id/mainFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.evavictoria.locus.guidetour.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
 </navigation>

@@ -20,7 +20,9 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class GuideTourRepository {
 
@@ -85,6 +87,35 @@ public class GuideTourRepository {
                         }
                     });
         return dados;
+    }
+
+
+    public List<Usuario> recuperarDadosUsuarios(){
+        MutableLiveData<List<Usuario>> dados = new MutableLiveData<List<Usuario>>();
+        docRef =
+                db.collection("usuarios")
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @SuppressLint("RestrictedApi")
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        Usuario u = new Usuario();
+                                        u.setNome(document.getString("nome"));
+                                        u.setEmail(document.getString("email"));
+                                        u.setSenha(document.getString("senha"));
+
+                                        usuarios.add(u);
+                                        Log.d(TAG, document.getId() + " => " + document.getData());
+                                    }
+                                    dados.setValue(usuarios);
+                                } else {
+                                    Log.d(TAG, "Error getting documents: ", task.getException());
+                                }
+                            }
+                        });
+        return usuarios;
     }
 
 

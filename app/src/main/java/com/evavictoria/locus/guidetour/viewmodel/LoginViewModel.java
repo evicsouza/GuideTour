@@ -1,28 +1,29 @@
 package com.evavictoria.locus.guidetour.viewmodel;
 
+import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.evavictoria.locus.guidetour.model.ColecaoFirebase;
+import com.evavictoria.locus.guidetour.model.PontoTuristico;
 import com.evavictoria.locus.guidetour.model.Usuario;
 import com.evavictoria.locus.guidetour.service.GuideTourRepository;
 
+import java.util.List;
+
 public class LoginViewModel extends ViewModel {
-        Usuario usuario;
-        GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
-        ColecaoFirebase documento;
 
-    public void recuperarDados(){
-        //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
-        //guideTourRepository.recuperarDadosPontosTuristicos();
+    static Usuario usuarioLogado;
+    GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
+
+    public void realizarLogin(Usuario u){
+        List<Usuario> dados = recuperarDados();
+        for(Usuario p: dados){
+            if(p.getEmail().equals(u.getEmail()) && p.getSenha().equals(u.getSenha())){
+                usuarioLogado = p;
+            }
+        }
     }
-    public void registrar(String nome,String email, String senha){
-        Usuario novo = new Usuario(nome, email, senha);
-        DatabaseReference usersRef = ref.child("users");
-
-        Map<String, User> users = new HashMap<>();
-        users.put("alanisawesome", new User("June 23, 1912", "Alan Turing"));
-        users.put("gracehop", new User("December 9, 1906", "Grace Hopper"));
-
-        usersRef.setValueAsync(users);
+    public List<Usuario> recuperarDados(){
+        //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
+        return guideTourRepository.recuperarDadosUsuarios();
     }
 }

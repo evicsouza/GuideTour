@@ -9,15 +9,24 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.evavictoria.locus.guidetour.databinding.FragmentCadastroBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentDescricaopontoBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentLoginBinding;
 import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
+import com.evavictoria.locus.guidetour.model.Usuario;
+import com.evavictoria.locus.guidetour.viewmodel.CadastroViewModel;
+import com.evavictoria.locus.guidetour.viewmodel.LoginViewModel;
 import com.google.android.gms.auth.api.identity.SignInCredential;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -29,37 +38,43 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginFragment extends Fragment {
     FragmentLoginBinding binding;
-    private FirebaseAuth firebaseAuth;
 
+    LoginViewModel viewModel;
+    Usuario usuario;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        firebaseAuth = FirebaseAuth.getInstance();
+        viewModel = new ViewModelProvider(this).get(LoginViewModel.class);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentLoginBinding.bind(view);
-        //recyclerview = (TextView) view.findViewById(R.id.descricaoPontoTuristico);
-        binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
+
+        binding.botaoLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String email = binding.editTextEmail.getText().toString();
-                String senha = binding.editTextPassword.getText().toString();
+                usuario = new Usuario();
+                usuario.setEmail(binding.loginEmail.getText().toString());
+                usuario.setSenha(binding.loginSenha.getText().toString());
+                viewModel.realizarLogin(usuario);
+
+                binding.esqueciSenha.setText("Logado");
 
             }
         });
-        binding.buttonRegistro.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        binding.botaoLoginGoogle.setOnClickListener(Navigation
+                .createNavigateOnClickListener(R.id.cadastroFragment, null));
 
-            }
-        });
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
-
 
 
     @Override
