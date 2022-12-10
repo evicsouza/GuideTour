@@ -1,7 +1,5 @@
 package com.evavictoria.locus.guidetour.service;
 
-import com.google.android.gms.auth.api.identity.BeginSignInRequest;
-
 public class LoginGoogle {
 
 //    signInRequest = BeginSignInRequest.builder()

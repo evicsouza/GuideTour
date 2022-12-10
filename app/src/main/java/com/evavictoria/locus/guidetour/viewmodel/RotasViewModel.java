@@ -29,13 +29,38 @@ public class RotasViewModel extends ViewModel {
     // Handle business logic
     private void loadUsers() {
         // Do an asynchronous operation to fetch users.
-        guideTourRepository.recuperarDadosPontosTuristicos();
+        //guideTourRepository.recuperarDadosPontosTuristicos();
     }
 
 
-    public void recuperarDados(){
-
+    public MutableLiveData<List<PontoTuristico>> recuperarDados(){
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
-        guideTourRepository.recuperarDadosPontosTuristicos();
+        return guideTourRepository.recuperarDadosPontosTuristicos();
     }
+
+    public String retornaNome(){
+        return guideTourRepository.pontoTuristico.getNome();
+    }
+    public String retornaDescricao(){
+        return guideTourRepository.pontoTuristico.getDescricao();
+    }
+
+//    public void ler() {
+//        Task<QuerySnapshot> docRef =
+//                db.collection("pontosTuristicos")
+//                        .get()
+//                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+//                            @SuppressLint("RestrictedApi")
+//                            @Override
+//                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+//                                if (task.isSuccessful()) {
+//                                    for (QueryDocumentSnapshot document : task.getResult()) {
+//                                        Log.d(TAG, document.getId() + " => " + document.getData());
+//                                    }
+//                                } else {
+//                                    Log.d(TAG, "Error getting documents: ", task.getException());
+//                                }
+//                            }
+//                        });
+//    }
 }

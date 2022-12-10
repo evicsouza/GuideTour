@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 
+import com.evavictoria.locus.guidetour.model.PontoTuristico;
 import com.evavictoria.locus.guidetour.service.GuideTourRepository;
 import com.google.firebase.firestore.auth.User;
 
@@ -30,13 +31,16 @@ public class DescricaoPontoTuristicoViewModel extends ViewModel {
     }
 
 
-    public void recuperarDados(){
+    public MutableLiveData<List<PontoTuristico>> recuperarDados(){
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
-        guideTourRepository.recuperarDadosPontosTuristicos();
+       return guideTourRepository.recuperarDadosPontosTuristicos();
     }
 
-    public void recuperarNome(){
-
+    public String retornaNome(){
+        return guideTourRepository.pontoTuristico.getNome();
+    }
+    public String retornaDescricao(){
+        return guideTourRepository.pontoTuristico.getDescricao();
     }
 
 //    public void ler() {
