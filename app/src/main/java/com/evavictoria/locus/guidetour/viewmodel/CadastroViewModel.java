@@ -8,7 +8,7 @@ import com.evavictoria.locus.guidetour.service.GuideTourRepository;
 public class CadastroViewModel extends ViewModel {
 
     Usuario usuario;
-    GuideTourRepository guideTourRepository;
+    GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
 
 
     public void cadastrarUsuario(Usuario usuario){

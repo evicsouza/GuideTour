@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentCadastroBinding;
 import com.evavictoria.locus.guidetour.model.Usuario;
@@ -34,10 +35,12 @@ public class CadastroFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 usuario = new Usuario();
-                usuario.setNome(binding.editTextNomeCadastro.toString());
-                usuario.setEmail(binding.editTextEmailCadastro.toString());
-                usuario.setSenha(binding.editTextSenhaCadastro.toString());
+                usuario.setNome(binding.editTextNomeCadastro.getText().toString());
+                usuario.setEmail(binding.editTextEmailCadastro.getText().toString());
+                usuario.setSenha(binding.editTextSenhaCadastro.getText().toString());
                 viewModel.cadastrarUsuario(usuario);
+
+
             }
         });
     }
