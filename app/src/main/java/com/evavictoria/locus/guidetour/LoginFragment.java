@@ -15,6 +15,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.evavictoria.locus.guidetour.databinding.FragmentDescricaopontoBinding;
+import com.evavictoria.locus.guidetour.databinding.FragmentLoginBinding;
+import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
 import com.google.android.gms.auth.api.identity.SignInCredential;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -25,7 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginFragment extends Fragment {
-
+    FragmentLoginBinding binding;
     private FirebaseAuth firebaseAuth;
 
 
@@ -36,11 +39,28 @@ public class LoginFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        binding = FragmentLoginBinding.bind(view);
+        //recyclerview = (TextView) view.findViewById(R.id.descricaoPontoTuristico);
+        binding.buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = binding.editTextEmail.getText().toString();
+                String senha = binding.editTextPassword.getText().toString();
+
+            }
+        });
+        binding.buttonRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
         return inflater.inflate(R.layout.fragment_login, container, false);
     }
+
+
 
     @Override
     public void onStart() {
