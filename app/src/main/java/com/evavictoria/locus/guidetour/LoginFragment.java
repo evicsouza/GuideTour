@@ -59,9 +59,13 @@ public class LoginFragment extends Fragment {
                 usuario = new Usuario();
                 usuario.setEmail(binding.loginEmail.getText().toString());
                 usuario.setSenha(binding.loginSenha.getText().toString());
-                viewModel.realizarLogin(usuario);
+                boolean saida = viewModel.realizarLogin(usuario);
+                if (saida == true){
+                    binding.esqueciSenha.setText("Logado");
+                }else{
+                    binding.esqueciSenha.setText("Errou");
+                }
 
-                binding.esqueciSenha.setText("Logado");
 
             }
         });
