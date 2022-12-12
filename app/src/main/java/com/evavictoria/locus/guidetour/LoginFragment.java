@@ -62,6 +62,8 @@ public class LoginFragment extends Fragment {
                 boolean saida = viewModel.realizarLogin(usuario);
                 if (saida == true){
                     binding.esqueciSenha.setText("Logado");
+                    NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
+                    navController.navigate(R.id.mainFragment);
                 }else{
                     binding.esqueciSenha.setText("Errou");
                 }
