@@ -2,11 +2,8 @@ package com.evavictoria.locus.guidetour.service;
 
 import static androidx.fragment.app.FragmentManager.TAG;
 
-import static java.security.AccessController.getContext;
-
 import android.annotation.SuppressLint;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -23,9 +20,7 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class GuideTourRepository {
 
@@ -147,7 +142,7 @@ public class GuideTourRepository {
                 });
 
     }
-    private GuideTourRepository() {
+    public GuideTourRepository() {
     }
 
 
