@@ -32,7 +32,7 @@ public class MainFragment extends Fragment {
         binding.imageButtonRestaurantes2.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.restaurantesFragment, null));
         binding.imageButtonServMedicos.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.servMedicosFragment, null));
+                .createNavigateOnClickListener(R.id.localizacaoFragment, null));
         binding.imageButtonHospedagem.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.loginFragment, null));
    }
