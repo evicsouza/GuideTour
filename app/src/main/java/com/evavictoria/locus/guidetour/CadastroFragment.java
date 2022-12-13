@@ -39,10 +39,11 @@ public class CadastroFragment extends Fragment {
                 usuario.setNome(binding.editTextNomeCadastro.getText().toString());
                 usuario.setEmail(binding.editTextEmailCadastro.getText().toString());
                 usuario.setSenha(binding.editTextSenhaCadastro.getText().toString());
-                viewModel.cadastrarUsuario(usuario);
-                NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
-                navController.navigate(R.id.mainFragment);
-
+                boolean saida = viewModel.cadastrarUsuario(usuario);
+                if(saida == true) {
+                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    navController.navigate(R.id.mainFragment);
+                }
 
             }
         });

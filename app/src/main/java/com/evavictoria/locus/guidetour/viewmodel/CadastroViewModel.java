@@ -14,11 +14,12 @@ public class CadastroViewModel extends ViewModel {
     GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
 
 
-    public void cadastrarUsuario(Usuario usuario){
+    public boolean cadastrarUsuario(Usuario usuario){
         if(validarEmail(usuario.getEmail()) && usuario.getSenha() != null && usuario.getSenha().length() > 0 && validarNome(usuario.getNome())){
             guideTourRepository.salvarDadosCadastro(usuario);
+            return true;
         }
-
+        return false;
     }
     public boolean validarNome(String nome) {
         boolean valido = false;
