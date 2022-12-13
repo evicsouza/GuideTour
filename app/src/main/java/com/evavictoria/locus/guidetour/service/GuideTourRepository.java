@@ -58,6 +58,7 @@ public class GuideTourRepository {
 //            }
 //        });
 //    }
+
     public MutableLiveData<List<PontoTuristico>> recuperarDadosPontosTuristicos(){
         MutableLiveData<List<PontoTuristico>> dados = new MutableLiveData<List<PontoTuristico>>();
         List<PontoTuristico> pontosTuristicos = new ArrayList<>();
