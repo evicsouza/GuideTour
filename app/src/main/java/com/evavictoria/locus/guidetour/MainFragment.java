@@ -12,11 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
+import com.evavictoria.locus.guidetour.viewmodel.LoginViewModel;
 
 public class MainFragment extends Fragment {
 
     FragmentMainBinding binding;
-
+    LoginViewModel loginViewModel = new LoginViewModel();
 
    @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
         binding = FragmentMainBinding.bind(view);
         binding.imageButtonRotas.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.rotasFragment, null));
