@@ -28,4 +28,7 @@ public class LoginViewModel extends ViewModel {
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
         return guideTourRepository.recuperarDadosUsuarios();
     }
+    public Usuario getUsuario(){
+        return this.usuarioLogado;
+    }
 }

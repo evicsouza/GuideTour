@@ -61,12 +61,10 @@ public class LoginFragment extends Fragment {
                 usuario.setSenha(binding.loginSenha.getText().toString());
                 boolean saida = viewModel.realizarLogin(usuario);
                 if (saida == true){
-                    binding.esqueciSenha.setText("Logado");
-                }else{
-                    binding.esqueciSenha.setText("Errou");
+
+                    NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
+                    navController.navigate(R.id.mainFragment);
                 }
-
-
             }
         });
         binding.botaoLoginGoogle.setOnClickListener(Navigation

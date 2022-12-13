@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentCadastroBinding;
@@ -38,8 +39,11 @@ public class CadastroFragment extends Fragment {
                 usuario.setNome(binding.editTextNomeCadastro.getText().toString());
                 usuario.setEmail(binding.editTextEmailCadastro.getText().toString());
                 usuario.setSenha(binding.editTextSenhaCadastro.getText().toString());
-                viewModel.cadastrarUsuario(usuario);
-
+                boolean saida = viewModel.cadastrarUsuario(usuario);
+                if(saida == true) {
+                    NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                    navController.navigate(R.id.mainFragment);
+                }
 
             }
         });
