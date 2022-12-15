@@ -28,8 +28,7 @@ public class PontoTuristicoAdapter extends RecyclerView.Adapter {
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_pontosturisticos, parent, false);
-        ViewHolderClass viewHolderClass = new ViewHolderClass(view);
-        return viewHolderClass;
+        return new ViewHolderClass(view);
     }
 
     @Override

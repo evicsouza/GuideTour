@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,18 +53,19 @@ public class RotasFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference("pontosTuristicos");
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         pontosTuristicosList = new ArrayList<>();
-        PontoTuristico ponto = new PontoTuristico();
-        ponto.setNome("Teste");
-        ponto.setDescricao("Teste");
-        pontosTuristicosList.add(ponto);
         pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDados());
+//        Toast.makeText(getActivity(), "msg1", Toast.LENGTH_LONG).show();
         binding.recyclerView.setAdapter(pontoTuristicoAdapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                   // String s = dataSnapshot.getValue(String.class);
                     PontoTuristico p = dataSnapshot.getValue(PontoTuristico.class);
+//                    PontoTuristico p = new PontoTuristico();
+//                    p.setNome(s);
+//                    p.setDescricao(s);
                     pontosTuristicosList.add(p);
+                    Toast.makeText(getActivity(), "pegou", Toast.LENGTH_LONG).show();
                 }
             }
 
