@@ -37,11 +37,11 @@ public class DescricaopontoFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
-        viewModel.recuperarDados().observe(this, pontoTuristicos -> {
+        //viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
+        /*viewModel.recuperar().observe(this, pontoTuristicos -> {
             binding.nomePontoTuristico.setText(viewModel.retornaNome());
             binding.descricaoPontoTuristico.setText(viewModel.retornaDescricao());
-        });
+        });*/
     }
 
     @Override

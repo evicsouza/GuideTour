@@ -15,22 +15,22 @@ public class DescricaoPontoTuristicoViewModel extends ViewModel {
 
     GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
 
-    private MutableLiveData<List<User>> users;
+    /*private MutableLiveData<List<User>> users;
     public LiveData<List<User>> getUsers() {
         if (users == null) {
             users = new MutableLiveData<List<User>>();
             loadUsers();
         }
         return users;
-    }
+    }*/
 
     // Handle business logic
-    private void loadUsers() {
+   /* private void loadUsers() {
         // Do an asynchronous operation to fetch users.
         //guideTourRepository.recuperarDadosPontosTuristicos();
-    }
+    }*/
 
-
+    /*
     public MutableLiveData<List<PontoTuristico>> recuperarDados(){
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
        return guideTourRepository.recuperarDadosPontosTuristicos();
@@ -41,7 +41,7 @@ public class DescricaoPontoTuristicoViewModel extends ViewModel {
     }
     public String retornaDescricao(){
         return guideTourRepository.pontoTuristico.getDescricao();
-    }
+    }*/
 
 //    public void ler() {
 //        Task<QuerySnapshot> docRef =
