@@ -5,7 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
-
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -20,6 +21,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
@@ -31,12 +37,13 @@ public class RotasFragment extends Fragment {
     PontoTuristicoAdapter pontoTuristicoAdapter;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
-    GuideTourRepository guideTourRepository;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentRotasBinding.inflate(inflater, container, false);
+
         return binding.getRoot();
     }
 
@@ -48,7 +55,7 @@ public class RotasFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        guideTourRepository = new GuideTourRepository();
+       // guideTourRepository = new GuideTourRepository();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("pontosTuristicos");
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -56,6 +63,7 @@ public class RotasFragment extends Fragment {
         pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDados());
 //        Toast.makeText(getActivity(), "msg1", Toast.LENGTH_LONG).show();
         binding.recyclerView.setAdapter(pontoTuristicoAdapter);
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
@@ -64,6 +72,8 @@ public class RotasFragment extends Fragment {
 //                    PontoTuristico p = new PontoTuristico();
 //                    p.setNome(s);
 //                    p.setDescricao(s);
+                    PontoTuristico p =  dataSnapshot.getValue(PontoTuristico.class);
+    //                String n = "oi";
                     pontosTuristicosList.add(p);
                     Toast.makeText(getActivity(), "pegou", Toast.LENGTH_LONG).show();
                 }
