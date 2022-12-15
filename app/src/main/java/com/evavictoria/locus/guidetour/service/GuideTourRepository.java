@@ -14,6 +14,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
@@ -30,6 +35,8 @@ public class GuideTourRepository {
     public static List<QueryDocumentSnapshot> docs;
     public PontoTuristico pontoTuristico;
     public List<Usuario> usuarios = new ArrayList<>();
+    FirebaseDatabase firebaseDatabase;
+    DatabaseReference documentReference;
 
 
     public synchronized static GuideTourRepository getInstance() {
@@ -41,23 +48,28 @@ public class GuideTourRepository {
         return guideTourRepository;
     }
 
-//    public void recuperarDados(ColecaoFirebase documento, Class classe) {
-//       db.collection(documento.getCaminho().toString())
-//               .get()
-//               .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-//            @SuppressLint("RestrictedApi")
-//            @Override
-//            public void onComplete(@NonNull Task<QuerySnapshot> task) {
-//                if (task.isSuccessful()) {
-//                    for (QueryDocumentSnapshot document : task.getResult()) {
-//                        ColecaoFirebase c = (ColecaoFirebase) document.toObject(classe);
-//                    }
-//                } else {
-//                    Log.d(TAG, "Error getting documents: ", task.getException());
-//                }
-//            }
-//        });
-//    }
+
+    public List<PontoTuristico> listarDados() {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        documentReference = firebaseDatabase.getReference("pontosTuristicos");
+        List<PontoTuristico> pontosTuristicos = new ArrayList<PontoTuristico>();
+        documentReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    PontoTuristico p = dataSnapshot.getValue(PontoTuristico.class);
+                    pontosTuristicos.add(p);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        return pontosTuristicos;
+    }
 
     public MutableLiveData<List<PontoTuristico>> recuperarDadosPontosTuristicos(){
         MutableLiveData<List<PontoTuristico>> dados = new MutableLiveData<List<PontoTuristico>>();
