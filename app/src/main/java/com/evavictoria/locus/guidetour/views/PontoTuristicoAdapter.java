@@ -12,14 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.evavictoria.locus.guidetour.R;
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class PontoTuristicoAdapter extends RecyclerView.Adapter {
 
     private Context context;
-    List<PontoTuristico> pontosTuristicos;
+    ArrayList<PontoTuristico> pontosTuristicos;
 
-    public PontoTuristicoAdapter(Context context, List<PontoTuristico> pontosTuristicos) {
+    public PontoTuristicoAdapter(Context context, ArrayList<PontoTuristico> pontosTuristicos) {
         this.context = context;
         this.pontosTuristicos = pontosTuristicos;
     }

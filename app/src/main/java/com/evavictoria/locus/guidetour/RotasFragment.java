@@ -21,13 +21,12 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class RotasFragment extends Fragment {
 
     FragmentRotasBinding binding;
-    List<PontoTuristico> pontosTuristicosList;
+    ArrayList<PontoTuristico> pontosTuristicosList;
     PontoTuristicoAdapter pontoTuristicoAdapter;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
@@ -41,6 +40,11 @@ public class RotasFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         guideTourRepository = new GuideTourRepository();
@@ -48,7 +52,11 @@ public class RotasFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference("pontosTuristicos");
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         pontosTuristicosList = new ArrayList<>();
-        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), pontosTuristicosList);
+        PontoTuristico ponto = new PontoTuristico();
+        ponto.setNome("Teste");
+        ponto.setDescricao("Teste");
+        pontosTuristicosList.add(ponto);
+        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDados());
         binding.recyclerView.setAdapter(pontoTuristicoAdapter);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -65,6 +73,7 @@ public class RotasFragment extends Fragment {
             }
         });
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();

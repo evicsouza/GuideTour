@@ -49,10 +49,10 @@ public class GuideTourRepository {
     }
 
 
-    public List<PontoTuristico> listarDados() {
+    public ArrayList<PontoTuristico> listarDados() {
         firebaseDatabase = FirebaseDatabase.getInstance();
         documentReference = firebaseDatabase.getReference("pontosTuristicos");
-        List<PontoTuristico> pontosTuristicos = new ArrayList<PontoTuristico>();
+        ArrayList<PontoTuristico> pontosTuristicos = new ArrayList<PontoTuristico>();
         documentReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
