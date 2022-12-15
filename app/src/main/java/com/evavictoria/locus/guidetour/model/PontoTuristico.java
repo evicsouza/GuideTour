@@ -3,14 +3,17 @@ package com.evavictoria.locus.guidetour.model;
 //implements ColecaoFirebase
 public class PontoTuristico {
 
-    CategoriaPontoTuristico categoria;
-    String descricao;
-    String nome;
+   // CategoriaPontoTuristico categoria;
+   private String descricao;
+   private String nome;
 
     // Image foto;
    // Geocoder localizacao;
    // String caminho = "pontosTuristicos";
 
+
+    public PontoTuristico() {
+    }
 
     public String getNome() {
         return nome;
@@ -42,16 +45,14 @@ public class PontoTuristico {
 //        this.localizacao = localizacao;
 //    }
 
-    public CategoriaPontoTuristico getCategoria() {
-        return categoria;
-    }
+//    public CategoriaPontoTuristico getCategoria() {
+//        return categoria;
+//    }
+//
+//    public void setCategoria(CategoriaPontoTuristico categoria) {
+//        this.categoria = categoria;
+//    }
 
-    public void setCategoria(CategoriaPontoTuristico categoria) {
-        this.categoria = categoria;
-    }
-
-    public PontoTuristico() {
-    }
 
 //    @Override
 //    public String getCaminho() {

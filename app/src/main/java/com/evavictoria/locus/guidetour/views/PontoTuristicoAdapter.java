@@ -1,5 +1,6 @@
 package com.evavictoria.locus.guidetour.views;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,16 +16,18 @@ import java.util.List;
 
 public class PontoTuristicoAdapter extends RecyclerView.Adapter {
 
+    private Context context;
     List<PontoTuristico> pontosTuristicos;
 
-    public PontoTuristicoAdapter(List<PontoTuristico> pontosTuristicos) {
+    public PontoTuristicoAdapter(Context context, List<PontoTuristico> pontosTuristicos) {
+        this.context = context;
         this.pontosTuristicos = pontosTuristicos;
     }
 
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_pontosturisticos, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_pontosturisticos, parent, false);
         ViewHolderClass viewHolderClass = new ViewHolderClass(view);
         return viewHolderClass;
     }
