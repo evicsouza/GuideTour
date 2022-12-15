@@ -18,6 +18,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentCadastroBinding;
@@ -35,6 +36,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+
+import org.w3c.dom.Text;
 
 public class LoginFragment extends Fragment {
     FragmentLoginBinding binding;
@@ -61,7 +64,6 @@ public class LoginFragment extends Fragment {
                 usuario.setSenha(binding.loginSenha.getText().toString());
                 boolean saida = viewModel.realizarLogin(usuario);
                 if (saida == true){
-
                     NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
                     navController.navigate(R.id.mainFragment);
                 }

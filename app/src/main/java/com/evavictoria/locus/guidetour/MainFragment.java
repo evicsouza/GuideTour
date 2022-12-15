@@ -10,6 +10,7 @@ import androidx.navigation.Navigation;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentMainBinding;
 import com.evavictoria.locus.guidetour.viewmodel.LoginViewModel;
@@ -21,14 +22,20 @@ public class MainFragment extends Fragment {
 
    @Override
     public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+       super.onCreate(savedInstanceState);
+
+
+
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         binding = FragmentMainBinding.bind(view);
+
         binding.imageButtonRotas.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.rotasFragment, null));
         binding.imageButtonRestaurantes2.setOnClickListener(Navigation
@@ -37,7 +44,9 @@ public class MainFragment extends Fragment {
                 .createNavigateOnClickListener(R.id.localizacaoFragment, null));
         binding.imageButtonHospedagem.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.loginFragment, null));
-
+        if(loginViewModel.getUsuario() != null) {
+            binding.textView8.setText(loginViewModel.getUsuario().getNome());
+        }
    }
 
     @Override

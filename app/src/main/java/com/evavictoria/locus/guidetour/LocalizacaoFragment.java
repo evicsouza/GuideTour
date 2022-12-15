@@ -98,10 +98,10 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
             locationManager = (LocationManager) getActivity().getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
             // Define the criteria how to select the locatioin provider -> use
             // default
+            askPermission();
             Criteria criteria = new Criteria();
             provider = locationManager.getBestProvider(criteria, false);
             Location location = locationManager.getLastKnownLocation(provider);
-
             onLocationChanged(location);
             googleMap = googleMap;
             onMapClick(googleMap);
@@ -121,6 +121,7 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
 
         return inflater.inflate(R.layout.fragment_localizacao, container, false);
     }
+
 
 
 /*
@@ -230,7 +231,7 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
 
         GoogleDirection.withServerKey(key)
                 .from(n)
-                .to(new LatLng(-8.8793745,-36.4635861))
+                .to(new LatLng(-8.87554,-36.3619275))
                 .transportMode(TransportMode.DRIVING)
                 .transitMode(TransitMode.BUS)
                 .unit(Unit.METRIC)
@@ -268,5 +269,33 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
         lat = location.getLatitude();
         longi = location.getLongitude();
     }
+
+
+
+    private void askPermission() {
+        ActivityCompat.requestPermissions(getActivity(), new String[]
+                {Manifest.permission.ACCESS_FINE_LOCATION},REQUEST_CODE);
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+
+        if (requestCode==REQUEST_CODE){
+            if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                System.out.println();
+            }
+            else {
+                Toast.makeText(getActivity(), "Required Permission", Toast.LENGTH_SHORT).show();
+            }
+        }
+
+
+
+
+
+
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
 }
 

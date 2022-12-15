@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -32,11 +34,16 @@ public class RotasFragment extends Fragment {
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
     GuideTourRepository guideTourRepository;
+    ArrayAdapter adapter = null;
+    ListView lv = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentRotasBinding.inflate(inflater, container, false);
+
+
+
         return binding.getRoot();
     }
 
