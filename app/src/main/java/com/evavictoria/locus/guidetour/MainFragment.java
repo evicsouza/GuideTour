@@ -37,6 +37,7 @@ public class MainFragment extends Fragment {
                 .createNavigateOnClickListener(R.id.localizacaoFragment, null));
         binding.imageButtonHospedagem.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.loginFragment, null));
+
    }
 
     @Override
