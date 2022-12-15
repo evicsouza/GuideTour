@@ -1,16 +1,17 @@
-package com.evavictoria.locus.guidetour.views;
 
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+        package com.evavictoria.locus.guidetour.views;
 
-import androidx.recyclerview.widget.RecyclerView;
+        import android.view.LayoutInflater;
+        import android.view.View;
+        import android.view.ViewGroup;
 
-import com.evavictoria.locus.guidetour.R;
-import com.evavictoria.locus.guidetour.model.PontoTuristico;
+        import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.List;
+        import com.evavictoria.locus.guidetour.R;
+        import com.evavictoria.locus.guidetour.model.PontoTuristico;
+
+        import java.util.ArrayList;
+        import java.util.List;
 
 public class GuideTourAdapter extends RecyclerView.Adapter<GuideTourViewHolder> {
 

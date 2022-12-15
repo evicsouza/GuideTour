@@ -16,7 +16,7 @@ public class RotasViewModel extends ViewModel {
     PontoTuristico pontoTuristico;
     GuideTourRepository guideTourRepository = GuideTourRepository.getInstance();
     ColecaoFirebase documento;
-
+/*
     private MutableLiveData<List<User>> users;
     public LiveData<List<User>> getUsers() {
         if (users == null) {
@@ -25,14 +25,14 @@ public class RotasViewModel extends ViewModel {
         }
         return users;
     }
-
+*/
     // Handle business logic
     private void loadUsers() {
         // Do an asynchronous operation to fetch users.
         //guideTourRepository.recuperarDadosPontosTuristicos();
     }
 
-
+/*
     public MutableLiveData<List<PontoTuristico>> recuperarDados(){
         //guideTourRepository.recuperarDados(pontoTuristico, PontoTuristico.class);
         return guideTourRepository.recuperarDadosPontosTuristicos();
@@ -44,7 +44,7 @@ public class RotasViewModel extends ViewModel {
     public String retornaDescricao(){
         return guideTourRepository.pontoTuristico.getDescricao();
     }
-
+*/
 //    public void ler() {
 //        Task<QuerySnapshot> docRef =
 //                db.collection("pontosTuristicos")
