@@ -4,9 +4,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -28,13 +28,12 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class RotasFragment extends Fragment {
 
     FragmentRotasBinding binding;
-    List<PontoTuristico> pontosTuristicosList;
+    ArrayList<PontoTuristico> pontosTuristicosList;
     PontoTuristicoAdapter pontoTuristicoAdapter;
     DatabaseReference databaseReference;
     FirebaseDatabase firebaseDatabase;
@@ -49,6 +48,11 @@ public class RotasFragment extends Fragment {
     }
 
     @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
        // guideTourRepository = new GuideTourRepository();
@@ -56,16 +60,22 @@ public class RotasFragment extends Fragment {
         databaseReference = firebaseDatabase.getReference("pontosTuristicos");
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         pontosTuristicosList = new ArrayList<>();
-        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), pontosTuristicosList);
+        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDados());
+//        Toast.makeText(getActivity(), "msg1", Toast.LENGTH_LONG).show();
         binding.recyclerView.setAdapter(pontoTuristicoAdapter);
 
         databaseReference.addValueEventListener(new ValueEventListener() {
-            @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                   // String s = dataSnapshot.getValue(String.class);
+                    PontoTuristico p = dataSnapshot.getValue(PontoTuristico.class);
+//                    PontoTuristico p = new PontoTuristico();
+//                    p.setNome(s);
+//                    p.setDescricao(s);
                     PontoTuristico p =  dataSnapshot.getValue(PontoTuristico.class);
-                    String n = "oi";
+    //                String n = "oi";
                     pontosTuristicosList.add(p);
+                    Toast.makeText(getActivity(), "pegou", Toast.LENGTH_LONG).show();
                 }
             }
 
@@ -75,6 +85,7 @@ public class RotasFragment extends Fragment {
             }
         });
     }
+
     @Override
     public void onDestroy() {
         super.onDestroy();

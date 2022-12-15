@@ -4,8 +4,8 @@ package com.evavictoria.locus.guidetour.model;
 public class PontoTuristico {
 
    // CategoriaPontoTuristico categoria;
-   private String descricao;
-   private String nome;
+   public String descricao;
+   public String nome;
 
     // Image foto;
    // Geocoder localizacao;
