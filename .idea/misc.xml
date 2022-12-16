@@ -6,13 +6,11 @@
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/aid_background.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/food_background.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/med.xml" value="0.2385" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rotas_background.xml" value="0.1" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rotas_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rounded_button.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rounded_input.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_cadastro.xml" value="0.22" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_descricaoponto.xml" value="0.2" />
+        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_descricaoponto.xml" value="0.33" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_hospedagens.xml" value="0.17432432432432432" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_localizacao.xml" value="0.1" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_login.xml" value="0.22" />
@@ -20,10 +18,8 @@
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_onde_ir.xml" value="0.25" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_ondeir.xml" value="0.22" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_restaurantes.xml" value="0.25" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_rotas.xml" value="0.2" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_serv_medicos.xml" value="0.1" />
+        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_rotas.xml" value="0.25" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_servmedicos.xml" value="0.25" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/item_pontosturisticos.xml" value="0.22" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/main_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/mipmap-anydpi-v26/food.xml" value="0.2385" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/drawable/rotas_background.xml" value="0.1955" />
@@ -37,13 +33,17 @@
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/activity_servmedicos.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_cadastro.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_descricaoponto.xml" value="0.209375" />
+        <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_hospedagens.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_login.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_onde_ir.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_ondeir.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_restaurantes.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_rotas.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_serv_medicos.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/fragment_servmedicos.xml" value="0.19791666666666666" />
+        <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/item_hospedagens.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/item_pontosturisticos.xml" value="0.209375" />
+        <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/item_restaurantes.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/itemrecycleview.xml" value="0.209375" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/layout/main_fragment.xml" value="0.19791666666666666" />
         <entry key="..\:/Users/eva_v/AndroidStudioProjects/GuideTour/app/src/main/res/mipmap-anydpi-v26/rotas.xml" value="0.1955" />

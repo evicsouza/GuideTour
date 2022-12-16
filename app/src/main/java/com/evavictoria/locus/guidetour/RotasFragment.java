@@ -1,13 +1,10 @@
 package com.evavictoria.locus.guidetour;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -22,11 +19,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
-import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
@@ -63,7 +55,7 @@ public class RotasFragment extends Fragment {
         binding.recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         pontosTuristicosList = new ArrayList<>();
 
-        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDados(),getActivity());
+        pontoTuristicoAdapter = new PontoTuristicoAdapter(getActivity(), guideTourRepository.listarDadosPontoTuristico(),getActivity());
 //        Toast.makeText(getActivity(), "msg1", Toast.LENGTH_LONG).show();
         binding.recyclerView.setAdapter(pontoTuristicoAdapter);
 

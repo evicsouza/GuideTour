@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
+import com.evavictoria.locus.guidetour.model.Restaurante;
 import com.evavictoria.locus.guidetour.model.Usuario;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -51,7 +52,7 @@ public class GuideTourRepository {
     }
 
 
-    public ArrayList<PontoTuristico> listarDados() {
+    public ArrayList<PontoTuristico> listarDadosPontoTuristico() {
         firebaseDatabase = FirebaseDatabase.getInstance();
         documentReference = firebaseDatabase.getReference("pontosTuristicos");
         ArrayList<PontoTuristico> pontosTuristicos = new ArrayList<PontoTuristico>();
@@ -71,6 +72,27 @@ public class GuideTourRepository {
         });
 
         return pontosTuristicos;
+    }
+    public ArrayList<Restaurante> listarDadosRestaurantes() {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        documentReference = firebaseDatabase.getReference("restaurantes");
+        ArrayList<Restaurante> restaurantes = new ArrayList<Restaurante>();
+        documentReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    Restaurante r = dataSnapshot.getValue(Restaurante.class);
+                    restaurantes.add(r);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        return restaurantes;
     }
 /*
     public MutableLiveData<List<PontoTuristico>> recuperarDadosPontosTuristicos(){

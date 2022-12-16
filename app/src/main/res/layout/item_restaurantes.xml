@@ -21,11 +21,11 @@
 
 
             <TextView
-                android:id="@+id/nomePontoTuristicoRotas"
+                android:id="@+id/nomeRestaurante"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:text="Turismo tipo_turismo"
+                android:text="Nome do Restaurante"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -33,28 +33,18 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/descricaoPontoTuristicoRotas"
+                android:id="@+id/enderecoRestaurante"
                 android:layout_width="277dp"
                 android:layout_height="193dp"
                 android:layout_marginTop="16dp"
-                android:text="Descrição de pontos turisticos"
+                android:text="Endereço do Restaurante"
                 android:textSize="16sp"
                 app:barrierMargin="2dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/nomePontoTuristicoRotas" />
+                app:layout_constraintTop_toBottomOf="@+id/nomeRestaurante" />
 
-            <Button
-                android:id="@+id/buttongerandoRota"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Gerar Rota"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descricaoPontoTuristicoRotas" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 
