@@ -8,13 +8,19 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.evavictoria.locus.guidetour.databinding.FragmentDescricaopontoBinding;
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
+import com.evavictoria.locus.guidetour.service.GuideTourRepository;
 import com.evavictoria.locus.guidetour.viewmodel.DescricaoPontoTuristicoViewModel;
 import com.evavictoria.locus.guidetour.views.GuideTourAdapter;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.List;
 
@@ -26,22 +32,30 @@ public class DescricaopontoFragment extends Fragment {
     private List<PontoTuristico> mTelfoneFixo;
     private GuideTourAdapter guideTourAdapter;
 
+
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         binding = FragmentDescricaopontoBinding.bind(view);
-        //recyclerview = (TextView) view.findViewById(R.id.descricaoPontoTuristico);
+        buttonGerarRota();
+    }
 
+    public void buttonGerarRota(){
+        binding.gerarRota.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                GuideTourRepository gui = new GuideTourRepository();
+                gui.destino = new LatLng(-8.884173,-36.484673);
+                NavController navController = Navigation.findNavController(getActivity(),R.id.nav_host_fragment);
+                navController.navigate(R.id.localizacaoFragment);
+            }
+        });
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //viewModel = new ViewModelProvider(this).get(DescricaoPontoTuristicoViewModel.class);
-        /*viewModel.recuperar().observe(this, pontoTuristicos -> {
-            binding.nomePontoTuristico.setText(viewModel.retornaNome());
-            binding.descricaoPontoTuristico.setText(viewModel.retornaDescricao());
-        });*/
+
     }
 
     @Override
@@ -51,18 +65,5 @@ public class DescricaopontoFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_descricaoponto, container, false);
     }
 
-//    private void carregarPontoTuristico() {
-//        GuideTourAdapter<PontoTuristico, GuideTourViewHolder> adapter =
-//                new FirebaseRecyclerAdapter<PontoTuristico, GuideTourViewHolder>(
-//                PontoTuristico.class,
-//                R.layout.fragment_descricaoponto,
-//                GuideTourViewHolder.class, categoria) {
-//            protected void populateViewHolder(GuideTourViewHolder itenViewHolder, PontoTuristico model, int position) {
-//                itenViewHolder.categoria.setText(model.getCategoria());
-//                itenViewHolder.nome.setText(model.getNome());
-//                itenViewHolder.descricao.setText(model.getDescricao());
-//            }
-//        };
-//        recyclerview.setAdapter(guideTourAdapter);
 
 }

@@ -39,9 +39,9 @@ public class MainFragment extends Fragment {
         binding.imageButtonRotas.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.rotasFragment, null));
         binding.imageButtonRestaurantes2.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.restaurantesFragment, null));
+                .createNavigateOnClickListener(R.id.descricaopontoFragment, null));
         binding.imageButtonServMedicos.setOnClickListener(Navigation
-                .createNavigateOnClickListener(R.id.localizacaoFragment, null));
+                .createNavigateOnClickListener(R.id.servMedicosFragment, null));
         binding.imageButtonHospedagem.setOnClickListener(Navigation
                 .createNavigateOnClickListener(R.id.loginFragment, null));
         if(loginViewModel.getUsuario() != null) {

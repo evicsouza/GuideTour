@@ -10,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.evavictoria.locus.guidetour.model.PontoTuristico;
 import com.evavictoria.locus.guidetour.model.Usuario;
+import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,6 +38,7 @@ public class GuideTourRepository {
     public List<Usuario> usuarios = new ArrayList<>();
     FirebaseDatabase firebaseDatabase;
     DatabaseReference documentReference;
+    public static LatLng destino;
 
 
     public synchronized static GuideTourRepository getInstance() {
