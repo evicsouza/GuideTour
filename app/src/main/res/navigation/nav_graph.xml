@@ -66,4 +66,9 @@
             android:id="@+id/action_loginFragment_to_cadastroFragment"
             app:destination="@id/cadastroFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/descricaopontoFragment"
+        android:name="com.evavictoria.locus.guidetour.DescricaopontoFragment"
+        android:label="fragment_descricaoponto"
+        tools:layout="@layout/fragment_descricaoponto" />
 </navigation>

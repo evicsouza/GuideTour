@@ -38,6 +38,7 @@ import com.akexorcist.googledirection.model.Direction;
 import com.akexorcist.googledirection.model.Leg;
 import com.akexorcist.googledirection.model.Route;
 import com.akexorcist.googledirection.util.DirectionConverter;
+import com.evavictoria.locus.guidetour.service.GuideTourRepository;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
@@ -76,7 +77,7 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
     GoogleMap googleMap;
     private LocationManager locationManager;
     private String provider;
-
+    GuideTourRepository guideTourRepository = new GuideTourRepository();
 
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
@@ -231,7 +232,7 @@ public class LocalizacaoFragment extends Fragment implements LocationListener {
 
         GoogleDirection.withServerKey(key)
                 .from(n)
-                .to(new LatLng(-8.87554,-36.3619275))
+                .to(guideTourRepository.destino)
                 .transportMode(TransportMode.DRIVING)
                 .transitMode(TransitMode.BUS)
                 .unit(Unit.METRIC)

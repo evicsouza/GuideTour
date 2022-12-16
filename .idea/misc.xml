@@ -6,11 +6,13 @@
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/aid_background.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/food_background.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/med.xml" value="0.2385" />
+        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rotas_background.xml" value="0.1" />
+        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rotas_foreground.xml" value="0.1" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rounded_button.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/drawable/rounded_input.xml" value="0.2385" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_cadastro.xml" value="0.22" />
-        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_descricaoponto.xml" value="0.33" />
+        <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_descricaoponto.xml" value="0.2" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_hospedagens.xml" value="0.17432432432432432" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_localizacao.xml" value="0.1" />
         <entry key="..\:/Users/Ikarus/Documents/GuideTour/GuideTour/app/src/main/res/layout/fragment_login.xml" value="0.22" />
